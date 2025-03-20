@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mp Mabirizi Emmanuel</title>
+    <style>
+    .container {
+max-width: 800px;
+margin: 40px auto;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.header {
+  background-color: #2c3e50;
+color: #fff;
+padding: 10px;
+text-align: center;
+background-size: 80% 20px 0px;
+height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
+.about-section {
+margin-top: 20px;
+}
+
+.about-section h2 {
+font-size: 24px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+
+.about-section p {
+font-size: 18px;
+font-weight: 400;
+margin-bottom: 20px;
+}
+
+.img-container {
+text-align: center;
+margin-bottom: 10px;
+}
+
+.img-container img {
+width: 95%;
+height: 80%;
+border-radius: 10px;
+}
+/* Scrollable img*/
+.image-gallery {
+position: relative;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+.gallery-wrapper {
+display: inline-block;
+}
+
+.gallery-wrapper img {
+width: 300px;
+height: auto;
+margin-right: 10px;
+border-radius: 10px;
+}
+
+.gallery-arrows {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+}
+
+.arrow {
+  color:;
+position: absolute;
+font-size: 24px;
+cursor: pointer;
+}
+
+.left-arrow {
+left: 0;
+color:grey;
+}
+
+.right-arrow {
+right: 0;
+color:#333;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color:white;
+        }
+
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .breadcrumb {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .breadcrumb li {
+            margin-right: 20px;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: black;
+            border: 1px solid #ddd;
+            color:white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+        div{ background-color: black;
+        color: white
+        ;}
+            /*Tooltip*/
+        .tooltip {
+      position: relative; /* helps position the tooltip content */
+      border-bottom: 1px solid black;
+    }
+    .tooltip-content {
+      color: white;
+      background: black;
+      padding: 3px;
+      border-radius: 5px;
+      visibility: hidden; /* hides the tooltip content */
+    
+      /* positions the tooltip content */
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      width: 110px;
+      margin-left: -55px; /* (width / 2) x -1 */
+      left: 50%;
+      top: 150%; /* to the top */
+    }
+    .tooltip:hover > .tooltip-content {
+      visibility: visible; /* shows the tooltip content on mouse over */
+    }
+    .tooltip > .tooltip-content::after {
+      content: " ";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px solid transparent;
+      border-bottom-color: black;
+    }
+    
+        p>a:link{text-decoration: none;
+  color: grey;
+}
+    /* Marquee or ticker of Adverts  */
+    
+    .ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker span {
+  display: inline-block;
+  animation: ticker 80s  linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+    /* Marquee or ticker of Adverts  */
+    
+    .ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker span {
+  display: inline-block;
+  animation: ticker 70s  linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+    .donateBtn2 {       border:none;
+      background:
+      linear-gradient(to right,white, rgba(0,0,0,0.5));
+      padding: 10px;
+      border-radius: 6px;
+      color: red;
+      width:70%;
+position:relative;
+      
+    }
+    
+.profile-btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: right;
+  padding-left: 12px;
+  border-left: 2px solid #ddd;
+}
+.profile-btn img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.profile-btn span {
+  color: var(--main-color);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+   @keyframes animate-title-word-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes animate-title-word-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    .title-word-1 {
+  animation: animate-title-word-1 2s 5s forwards;
+}
+
+.title-word-2 {
+  animation: animate-title-word-2 2s 3s forwards;
+
+}
+
+.title-word-3 {
+  animation: animate-title-word-2 2s 5s forwards;}
+
+
+  
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+        .blinking {
+        animation: blink 5s infinite;
+    }
+
+  
+    .donateBtn2 {       border:none;
+      background:
+      linear-gradient(to right,white, rgba(0,0,0,0.5));
+      padding: 10px;
+      border-radius: 6px;
+      color: red;
+      width:70%;
+position:relative;}
+      
+  @keyframes bgcolors {
+  0% {
+    background: linear-gradient(to right, #E3EA5F, rgba(230, 20, 255, 0.3));
+  }
+
+  10% {
+    background: linear-gradient(to right, #E3EAFF, black);
+  }
+  30% {
+    background: linear-gradient(to right, red, #D4DFED);
+  }
+  40% {
+    background: linear-gradient(to right, black, #FFE2FB);
+  }
+  50% {background: linear-gradient(to right, #E3EA5F, rgba(230, 20, 255, 0.3));
+     }
+  60% {
+    background: linear-gradient(to right, hotpink, indigo);
+  }
+  80% {
+    background: linear-gradient(to right, black, #E3EAFF);
+  }
+  90% {
+    background: linear-gradient(to right, #E3EAFF, black) }
+  100% {
+    background: linear-gradient(to right,#333, #D4DFED);
+  }
+
+  }
+
+    .bodyBg {
+      animation: bgcolors 30s linear 0s infinite;
+    }
+     
+
+.call-to-action {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+.section {
+    padding: 2rem;
+    background-color: rgba(25,55,55,.8);
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 3px 10px 6px rgba(0,0,0,0.5);
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item"><a href="index.html#fundraising">Fundraising</a></li>
+<li class="breadcrumb-item"><a href="donations.html">
+      <span class="tooltip"> 
+      <span class="tooltip-content">  Please Make Donations Here! </span>
+    
+  Donate Page</a></li></span>
+</ol>
+</nav>
+</header>
+
+   <!-- Marquee or ticker-->
+ <div class="ticker">
+<span> <a href ="https://kisitueric.github.io" style= "text-decoration:none; font-family:droid sans; font-weight: bold; color:white;       background: linear-gradient(to top, red, indigo); padding:7px"> &nbsp;We Cheerfully recognise your genius by visiting this "about" page!&nbsp;&nbsp;&nbsp;We also thank God for inspiring you to support Emmanuel.&nbsp;&nbsp;&nbsp;&nbsp;Please follow the prompts and donate succesfully   &nbsp;&nbsp;&nbsp;&nbsp;Emmanuel is ever at your Service.&nbsp;&nbsp;&nbsp;&nbsp;May God&nbsp;&nbsp;&nbsp;Reward you abundantly!!!&nbsp;&nbsp; Tap to See more!</a></span>
+</div>  
+<main>
+  <div class="section">
+  <h1 class="title-word-1"> Introduction </h1>
+        <button class="profile-btn ">
+        <img src="profile-pic.jpg" />
+        
+      </button> MP Mabirizi Emmanuel for Busiro East🇺🇬  </a></div>
+      <div>
+<p class="title-word-1">Emmanuel is a looking forward to re-campaigning for the general elections for the post of Member of Parliament of Uganda, he previously managed to know his weakness especially in terms of finances!</p>
+<p class="title-word-2">With comfidence, Emmanuel comes back 10 times a competitive candidate for this post!</p> 
+<p>He's relying on donations to sustain all his operations. Your support enables him to be competent throught the forth coming elections!</p> <p class="title-word-1">Kindly consider donating to help us win the Victory!</p>
+ <div class="section" style="color:white; background-color:red">Your Power! Is Our Power!</div>
+ 
+     <div id="donations" class="animate-from-bottom section" >
+        <h2 id="donate" class="titles animate-from-bottom">Donations</h2>
+    <h2 class="title-word-1">Join Hands to Make a Difference</h2>
+    
+    
+    
+    <p class="call-to-action title-word-3">Donate today and be part of the movement that is dedicated to creating a brighter future for all.</p>
+           <a href="donations.html"> <button class="donateBtn2 blinking animate-from-bottom bodyBg">Donate Now</button></a>
+   
+</div>
+    <div class="container" style="background-color:gold">
+        <div class="header">
+            <h1 class="animate__animated animate__fadeInDown" style="color:gold">Mabirizi Emmanuel</h1>
+        </div>
+        <div class="about-section ">
+            <h2 class="animate__animated animate__fadeInLeft" style="color:cyan;text-align: center">About Mabirizi Emmanuel</h2>
+       
+            <p class="animate__animated animate__fadeInRight">Mabirizi Emmanuel is a multifaceted individual with a rich background in various fields. Born and raised in Uganda, he has made a name for himself as a Master Guide, politician, entrepreneur, and music producer.</p>
+            <p class="animate__animated animate__fadeInUp">Mabirizi's early career began in music production, where he nurtured many artists in Tanzania (Maua Sama, Saida Karoli, Kariwa SDA Church Choir, Njoro family Choir among others) and Uganda. His passion for music was just the starting point for his diverse endeavors.</p>
+
+                </div>
+            </div>
+            
+            <p class="animate__animated animate__fadeInDown">Through Emash Wooden Belts Ltd, Mabirizi aims to provide employment opportunities for unemployed youths, addressing a pressing issue in Uganda. His commitment to community development and social responsibility is evident in his business ventures.</p>
+            
+                        <p class="animate__animated animate__fadeInLeft">Interestingly, Mabirizi has also worked in informal settings, such as Owino Market in Kampala, where he dealt in second-hand clothes. This experience has given him a unique understanding of the challenges faced by ordinary Ugandans.</p>
+                          <p class="animate__animated animate__fadeInRight">Mabirizi Emmanuel's journey is a testament to his resilience, adaptability, and dedication to creating positive change in his community.</p>
+</main>
+
+</body>
+</html>

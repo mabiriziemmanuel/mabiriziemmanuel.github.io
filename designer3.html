@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric K The Coder</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Righteous&amp;display=swap'>
+    
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+
+}
+
+    .intro-container {
+      position: absolute;
+      top: 49%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 80%;
+      
+    }
+
+    .logo-container {
+      margin-bottom:3px;
+      
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      animation: logo-animation 3s ease-in-out infinite;
+    }
+
+    @keyframes logo-animation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .text-container {
+      margin-top: 10px;
+    }
+
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+      color: teal;
+      animation: title-animation 2s ease-in-out;
+    }
+
+    @keyframes title-animation {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: rgba(0, 0,255,1);
+      font-family:lato ;
+      
+      animation: subtitle-animation 2s  ease-in-out;
+      
+    }
+    /*title */
+    
+
+    @keyframes subtitle-animation {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animation-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #007bff;
+      animation: circle-animation 2s ease-in-out infinite;
+    }
+
+    .circle:nth-child(1) {
+      top: 5%;
+      left: 12%;
+      width:35px;
+      height: 35px;
+
+      animation-delay: 0s;
+    }
+
+    .circle:nth-child(2) {
+      top: 28%;
+      left: 10%;
+            width:15px;
+      height: 15px;
+      animation-delay: 0.5s;
+      background-color:teal;
+    }
+    .circle:nth-child(5) {
+      top: 15%;
+      left: 85%;
+            width:12px;
+      height: 12px;
+      animation-delay: 0.5s;
+      background-color:teal;
+    }
+    .circle:nth-child(4) {
+      top: 68%;
+      left: 82%;
+            width:13px;
+            background-color: teal;
+      height: 13px;
+      animation-delay: 3s;
+    }
+    .circle:nth-child(3) {
+      top: 75%;
+      left: 90%;
+      animation-delay: 1s;
+      
+    }
+
+    @keyframes circle-animation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    /*main Title animations*/
+        .title {
+      font-size: 60px;
+      font-weight: bold;
+      color: teal;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      padding-left: 0px;
+      margin: 0;
+    }
+
+    .title::before {
+      content: "";
+      position: absolute;
+      top: 47%;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #007bff;
+      animation: border-left-animation 2s ease-in-out forwards;
+    }
+
+    .title::after {
+      content: "";
+      position: absolute;
+      top: 47%;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: #007bff;
+      animation: border-right-animation 3s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes border-left-animation {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 50%;
+      }
+    }
+
+    @keyframes border-right-animation {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 50%;
+      }
+    }
+
+a:link{text-decoration: none;
+  color: indigo;
+}
+a:hover{color: green
+;}
+a:visited{ color:orange;
+border:1px solid red;}
+   .whatsapp {
+     position: absolute;
+     top:5px;
+     left:5px;
+     
+     border-radius: 8px;
+            background-color: #25d366;
+       padding: 10px;
+        display:inline}
+        
+          .message {
+            position: absolute;
+            top:10px;
+          right:5px;  border-radius: 10px;
+            background-color: #0084ff;
+            padding: 6px; display: inline;
+        }
+    
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+        .blinking {
+        animation: blink 1s infinite;
+    }
+
+  
+  </style>
+</head>
+              <a href="https://wa.me/256783101345?text=I'm%20interested%20in%20your%20websites%20and%20apps%20projects%20%20dear%20Eric,%20they %20are %20so%20beautiful.%20" class="whatsapp "id="contacts">
+                    <i class="fab fa-whatsapp"></i>Whatsapp Me
+                </a>
+                       <p style="position:absolute; left:50%;top:0px;margin:0;font-weight:bolder" > &nbsp;OR    &nbsp; </p>  <a href="mailto:kisitueric800@gmail.com?subject=Hi%20Websites Master&body=I'm%20interested%20in%20your%20websites%20and%20apps%20projects%20%20dear%20Eric,%20they %20are %20so%20beautiful.%20" class="message">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+<body class="bodyBg">
+  <div class="intro-container">
+    <div class="logo-container">
+      <img src="erck.jpg" alt="Eric K Yo Websties Master" class="logo">
+  <h1 style="color:grey;font-family:lato;font-weight:bolder;font-size:19px " class="blinking">Eric K - The WebMaster</h1>
+
+   <h3 style="color:silver" >Author of:</h3>
+    </div>
+    <div class="text-container">
+      <h1 class="title">Adventists Onl<span style="font-size:45px">&nbsp;i&nbsp;</span>ne </h1>
+      <h3 style="color:grey" class="blinking">App</h3>
+      <p class="subtitle blinking">where God's people meet
+     and share Christ ...</p>
+    </div>
+    <div class="animation-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+            <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+  
+  Contact him @:
+  <a href="https://kisitueric.github.io" class="blinking">
+     kisitueric.github.io</a></div>
+     
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html"; // Replace with main page URL
+    }, 10000);
+
+    let logo = document.querySelector('.logo');
+    let counter = 0;
+
+    setInterval(() => {
+      counter++;
+      if (counter % 2 === 0) {
+        logo.src = 'eric.jpg';
+      } else {
+        logo.src = 'eric.jpg';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

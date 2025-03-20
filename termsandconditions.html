@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidelines for Donations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:
+      linear-gradient(to right,white, rgba(0,0,0,0.5));
+        }
+
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .breadcrumb {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .breadcrumb li {
+            margin-right: 20px;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+          background:
+      linear-gradient(to right,white, rgba(0,0,0,0.5));
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+            /*Tooltip*/
+        .tooltip {
+      position: relative; /* helps position the tooltip content */
+      border-bottom: 1px solid black;
+    }
+    .tooltip-content {
+      color: white;
+      background: black;
+      padding: 3px;
+      border-radius: 5px;
+      visibility: hidden; /* hides the tooltip content */
+    
+      /* positions the tooltip content */
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      width: 110px;
+      margin-left: -55px; /* (width / 2) x -1 */
+      left: 50%;
+      top: 150%; /* to the top */
+    }
+    .tooltip:hover > .tooltip-content {
+      visibility: visible; /* shows the tooltip content on mouse over */
+    }
+    .tooltip > .tooltip-content::after {
+      content: " ";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px solid transparent;
+      border-bottom-color: black;
+    }
+    
+        p>a:link{text-decoration: none;
+  color: grey;
+}
+    
+    /* Marquee or ticker of Adverts  */
+    
+    .ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker span {
+  display: inline-block;
+  animation: ticker 60s  linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item"><a href="index.html#fundraising">Fundraising</a></li>
+<li class="breadcrumb-item"><a href="donations.html">
+      <span class="tooltip"> 
+      <span class="tooltip-content">  Please Make Donations Here! </span>
+    
+  Donate Page</a></li></span>
+</ol>
+</nav>
+</header>
+
+   <!-- Marquee or ticker-->
+ <div class="ticker">
+<span> <a href ="donations.html" style= "text-decoration:none; font-family:droid sans; font-weight: bold; color:white;       background: linear-gradient(to top, red, indigo); padding:7px"> &nbsp;We Cheerfully recognise your genius by visiting this page!&nbsp;&nbsp;&nbsp;We also thank God for inspiring to support Emmanuel.&nbsp;&nbsp;&nbsp;&nbsp;Please follow the prompts and donate succesfully   &nbsp;&nbsp;&nbsp;&nbsp;Emmanuel is ever at your Service.&nbsp;&nbsp;&nbsp;&nbsp;May God&nbsp;&nbsp;&nbsp;Reward you abundantly!!!&nbsp;&nbsp; Tap to See more!</a></span>
+</div>  
+<main>
+
+<div>
+<h1>Terms of Use for Donations</h1>
+
+<p>
+By using our donation page, you agree to the following terms and conditions. Please read them carefully before making a donation.
+</p>
+
+<h2>Donation Process</h2>
+<p>
+To make a donation, you will need to provide your name and the amount you wish to donate. You will then be directed to a page with account details for depositing the funds.
+</p>
+
+<h3>Bank Deposit</h3>
+<p>
+If you choose to donate via bank deposit, you will need to copy the provided account number and deposit the funds using your preferred banking method.
+</p>
+
+<h3>Mobile Money</h3>
+<p>
+If you choose to donate via mobile money, you will need to enter the provided mobile money number and follow the prompts to complete the transaction.
+</p>
+
+<h3>PayPal (Currently Unavailable)</h3>
+<p>
+PayPal donations are currently unavailable. However, when available, you will need to have a PayPal account to donate using this method. Funds will be transferred from our PayPal account to our bank account.
+</p>
+
+<h2>Important Notes</h2>
+<ul>
+<li>
+Our website does not facilitate direct deposits or transactions.
+</li>
+<li>
+You are responsible for ensuring the accuracy of your donation details.
+</li>
+<li>
+All donations are final and non-refundable.
+</li>
+</ul>
+
+<h2>Acceptance of Terms</h2>
+<p>
+By using our donation page, you acknowledge that you have read, understood, and agreed to these terms and conditions.
+</p>
+</div>
+</main>
+</body>
+</html>

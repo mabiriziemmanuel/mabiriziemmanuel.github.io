@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Members for Emmanuel's Campaign</title>
+        
+    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:
+      linear-gradient(to right,white, rgba(0,0,0,0.5));
+        }
+
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .breadcrumb {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .breadcrumb li {
+            margin-right: 20px;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+            /*Tooltip*/
+        .tooltip {
+      position: relative; /* helps position the tooltip content */
+      border-bottom: 1px solid black;
+    }
+    .tooltip-content {
+      color: white;
+      background: black;
+      padding: 3px;
+      border-radius: 5px;
+      visibility: hidden; /* hides the tooltip content */
+    
+      /* positions the tooltip content */
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      width: 110px;
+      margin-left: -55px; /* (width / 2) x -1 */
+      left: 50%;
+      top: 150%; /* to the top */
+    }
+    .tooltip:hover > .tooltip-content {
+      visibility: visible; /* shows the tooltip content on mouse over */
+    }
+    .tooltip > .tooltip-content::after {
+      content: " ";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px solid transparent;
+      border-bottom-color: black;
+    }
+    
+        p>a:link{text-decoration: none;
+  color: grey;
+}
+    /* Marquee or ticker of Adverts  */
+    
+    .ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker span {
+  display: inline-block;
+  animation: ticker 80s  linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+    /* Marquee or ticker of Adverts  */
+    
+    .ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker span {
+  display: inline-block;
+  animation: ticker 70s  linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.profile-btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  border-left: 2px solid #ddd;
+}
+.profile-btn img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.profile-btn span {
+  color: var(--main-color);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+@property --_t {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0; 
+}
+@property --_r {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg; 
+}
+section {
+  --d: 20s; /* animation duration*/
+  --n: 8; /* number of speakers*/
+  
+  font: 20px/1.6 "Source Code Pro", Inconsolata, Menlo, monospace;
+  color: rgb(34 34 34);
+  margin: 3em 1em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+   position: relative;
+}
+
+li {
+  transition: .3s;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  color: firebrick;
+  background: conic-gradient(firebrick 0 0) bottom/100% 0% no-repeat;
+  transition: .3s;
+}
+a span {
+  
+  position: absolute;
+  top: 23%;
+  left: 8.5rem;
+  translate: -50% -50%;
+  width: 60px;
+  background-size: 200px 200px!important;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: rotate(var(--_r)) translate(var(--_t)) rotate(calc(-1*var(--_r)));
+  --_t: 140px;
+  transition: --_t .3s,width .3s,background .3s,--_r calc(var(--d)*100) linear calc(var(--d)*(-1*var(--i)/var(--n)));
+  /* you can use an animation but let's try something else! */
+  @starting-style {
+    --_r: 100turn;
+  }
+}
+a:hover {
+  color: #fff;
+  background-size: 100% 100%;
+}
+a:hover span {
+  --_t: 0px;
+  width: 200px;
+  background-position: 50% 50%!important;
+}
+ul:has(a:hover) li:not(:has(a:hover)) {
+  opacity: .6;
+}
+
+span#cecil	  { --i:1;background: url('exe2.jpg') -70px -55px; }
+span#eric	{ --i:2;background: url('eric.jpg') -48px -78px; }
+span#brad 	{ --i:3;background: url('https://www.cssday.nl/pix/speakers/brad.jpg') -70px -68px; }
+span#ana 	  { --i:4;background: url('https://www.cssday.nl/pix/speakers/ana.jpg') -77px -58px; }
+span#john 	{ --i:5;background: url('https://www.cssday.nl/pix/speakers/john.jpg') -60px -60px; }
+span#bramus	{ --i:6;background: url('https://www.cssday.nl/pix/speakers/bramus.jpg') -45px -45px; }
+span#adam 	{ --i:7;background: url('https://www.cssday.nl/pix/speakers/adam.jpg')  -82px -58px; }
+span#miriam	{ --i:8;background: url('https://www.cssday.nl/pix/speakers/miriam.jpg') -75px -45px; }
+
+ .titles{text-shadow: 5px 7px 5px rgba(0, 0, 0, 0.5);}
+
+
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item"><a href="index.html#fundraising">Fundraising</a></li>
+<li class="breadcrumb-item"><a href="donations.html" >
+Donate Page</a></li>
+</ol>
+</nav>
+</header>
+
+   <!-- Marquee or ticker-->
+ <div class="ticker titles">
+<span> <a href ="designer.html" style= "text-decoration:none; font-family:droid sans; font-weight: bold; color:white;       background: linear-gradient(to top, white, indigo); padding:7px"> &nbsp;This is the Executes'&nbsp;page!&nbsp;&nbsp;&nbsp;We thank God for inspiring you to  support Emmanuel&nbsp;&nbsp;&nbsp;&nbsp;Please consider donating to support him in the next Campaign, follow the prompts and donate succesfully   &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;May God&nbsp;&nbsp;&nbsp;Reward you abundantly!!!&nbsp;&nbsp; Tap to See more!</a></span>
+</div>  
+
+<h1 class="titles">Execute Committe</h1>
+<section>
+  <ul>
+
+    <li><a href="#">Cecil Smith<span id="cecil"></span></a>: Address Florida</li>
+    <li><a href="#"style="color:indigo">Eric Kisitu<span id="eric"></span></a>: For IT - Websites Master(coder). Address Kampala </li>
+    <li><a href="#">Brad Frost<span id="brad"></span></a>: Design Token Architecture</li>
+    <li><a href="#">Ana Rodrigues<span id="ana"></span></a>: Advisor</li>
+    <li><a href="#">John Allsopp<span id="john"></span></a>: Address California</li>
+    <li><a href="#">Bramus Van Damme<span id="bramus"></span></a>: Address South Africa</li>
+    <li><a href="#">Adam Argyle<span id="adam"></span></a>: Advisor</li>
+    <li><a href="#">Miriam Suzanne<span id="miriam"></span></a>: Address Kampala</li>
+  </ul>
+</section>
+<!-- partial -->
+  
+
+
+
+
+<div class="messages-section">
+  <div class="" id="testimonies">
+    <h3 class="titles">Messages</h3>
+  </div>
+  <div class="messages">
+    <div class="message-box profile-btn">
+      <img src="exe1.jpg" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">Cecil</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-1">
+            <label for="star-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+Emmanuel is a great leader! You inspire me dear.
+        </p>
+        <p class="message-line time">
+          Jan, 12
+        </p>
+      </div>
+    </div>
+    <div class="message-box profile-btn">
+      <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">Mark</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-2">
+            <label for="star-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          Hey, I really follow your projects on Social media, and i know Uganda is so blessed to have you!
+        </p>
+        <p class="message-line time">
+          Feb, 20
+        </p>
+      </div>
+    </div>
+    <div class="message-box profile-btn">
+      <img src="erick.jpg" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">Eric</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-3">
+            <label for="star-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          Awesome! 🤩 I believe in you Emmanuel! Your work towards the progress of The Church and Busiro East is as visible as daylight. thx
+        </p>
+        <p class="message-line time">
+        March , 3
+        </p>
+      </div>
+    </div>
+    <div class="message-box profile-btn">
+      <img src="https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFuJTIwbW9kZXJufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">Jessica</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-4">
+            <label for="star-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          I am really impressed! Can't wait to see your Success.
+        </p>
+        <p class="message-line time">
+          March, 11
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

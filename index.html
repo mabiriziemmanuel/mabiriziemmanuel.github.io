@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mabirizi Emmanuel - 2026 Election Campaign</title>
+    <link rel="stylesheet" href="styles.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Righteous&amp;display=swap'>
+        
+    
+</head>
+
+<body class="app-container " >
+    <div class="header">
+        <nav class="top-nav">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776; <!-- Menu Icon -->
+            </div>
+                <!--Top Time and Greetimgs -->
+    
+<p id="greeting" style="text-align:center; color: silver;font-family:droidserif;text-decoration: italics"> <span class="greetedName"></span></p>
+ <p style="color:lightblue; position:absolute;top:0px;right:15px;" id ="clock"></p>
+ 
+             <div class="app-header-right">
+      <button class="mode-switch " title="Switch Theme">
+        <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+          <defs></defs>
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+      </button>
+
+     <a href="#aboutEma.html" style="text-decoration:none">
+      <button class="profile-btn  blinking">
+        <img src="profile-pic.jpg" />
+        <span>Mp Emma 
+🇺🇬
+        </span>
+      </button></a>
+            </div>
+            <a href="donations.html" class="donate-button bodyBg ">  <span class="tooltip"> 
+      <span class="tooltip-content">  Please Make Donations Here! </span>
+    
+  Donate </li></span></a>
+        </nav>
+        <div class="menu-content" id="menuContent">
+            <ul>
+               <li><a href="#activities">Activities</a></li>
+                <li><a href="#fundraising">Fundraising</a></li>
+                <li class="dropdown">
+                    <a href="#more">More</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#projects">Projects</a></li>
+                <li><a href="#leadership">My Leadership In Curch</a></li>
+                      
+                        <li><a href="executives.html#testimonies">Testimonies
+                        
+                      <button class="messages-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
+    </button></a>   </li>
+                    </ul>
+                </li>
+                <li><a href="#contacts">Contact</a></li>
+                <li><input type="text" id="searchBar" placeholder="type a Search, then scroll down..." onkeyup="localSearch()" style="padding:1rem"></li>
+            </ul>
+        </div>
+
+
+<div class="breadcrumbs ">
+            <a href="#home">|Home</a> &gt;              <a href="#executive">Executive</a> &gt;
+               <a href="#posts">Posts</a> &gt;
+                         <a href="#donate">  <span class="tooltip"> 
+      <span class="tooltip-content">  Please Make Donations Here! </span>
+    
+  Donate </li></span></a></a>
+        </div>
+    </div>
+  
+    <!--typewriter-->
+<div class="typewriter">      
+  <span class="typed-text"></span>
+  <span class="cursor">&nbsp; </span>
+</div>
+
+
+<hr/>
+
+
+ <section id="masthead" style="--name:--masthead-s;" class="black">
+    <div class="flying-squares">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+    <div class="masthead">
+      <h1 class="title-word-2 titles" style="color:red">My Dear</h1>
+      <p style="color:indigo" class="title-word-3">Emmanuel Welcomes you😃.</p>
+    </div>
+  </section>
+
+
+
+ <section id="tiles" style="--name:--tiles-s;">
+    <div class="tile-section">
+      <div class="tile-container black">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+    </div>
+  </section>
+  <!--profile-->
+   <div class="contacts  profile-container black">
+        <div class="headers black card title-word-3 titles">
+            <img  src="profile-pic.jpg" alt="Profile Picture">
+            <h1 class="animate-from-bottom flying">Mp Busiro East Mabirizi Emmanuel 2026 - 2030
+🇺🇬
+            </h1>
+            <div class="buttons">
+                <a href="https://wa.me/256758296217?text=*Hi*%20!%20Iam%20interested%20in%20seeing%20you%20win%20the%20forthcoming%20elections%20dear%20Emmanuel,%20I %20really%20like %20your%20commitment%20towards%20the%20Church%20and%20Busiro%20East%20at%20large!%20*I also%20heard%20your%20need%20for%20Donations,%20your%20Projects%20%20and%20many%20more!*%20%0AHere%20I%20am,%20Let%20us%20talk%20about%20" class="whatsapp blinking"id="contacts">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="mailto:mabiriziemmanuel@gmail.com?subject=Campaign%20Support&body=*Hi*%20!%20Iam%20interested%20in%20seeing%20you%20win%20the%20forthcoming%20elections%20dear%20Emmanuel,%20I %20really%20like %20your%20commitment%20towards%20the%20Church%20and%20Busiro%20East%20at%20large!%20I also%20heard%20your%20need%20for%20Donations,%20your%20Projects%20%20and%20many%20more!%20%0AHere%20I%20am,%20Let%20us%20talk%20about%20" class="blinking message">
+                    <i class="fas fa-envelope"></i> Message
+                </a>
+            </div>
+        </div>
+        <div class="content black ">
+            <div class="stats ">
+                <div >1.3M followers</div>
+                <div >1.1k visits</div>
+            </div>
+            <div class="description  titles">
+                Creating a motto constituency
+            <p class="animate-from-bottom titles">"Kulwa Busiro Empya"</p>
+            </div>
+            <div class="tabs animate-from-bottom">
+                <a href="#posts"class="blinking titles">Posts</a>
+                <a href="aboutEma.html" >About</a>
+                <a href="#gallery" >Gallery</a>
+                <a class="titles blinking" class="font-family:lato" href="#executive">Execute Campaign Committee</a>
+            </div>
+        </div>
+    </div>
+  
+
+<div>
+  <iframe width="100%" height="280"      src="https://www.youtube.com/embed/pDJUM4eBK8c?si=qFiCfP6G7k03onXl&vq=auto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+    
+    <div id="fundraising" class="black  animate-from-bottom section">
+        <h2 class="fundraising   animate-from-top titles">Fundraising</h2>
+        <p class="animate-from-left">Help support Mabirizi Emmanuel's campaign by donating today.</p>
+       <a href="donations.html"> <button class="donateBtn2 blinking">Donate Now</button></a>
+    </div>
+
+    
+    <div id="fundraising" class="black  animate-from-bottom section">
+        <h2 class="fundraising   animate-from-bottom titles" id="executive">Executive Campaign Committee</h2>
+        <p class="animate-from-left titles">We thank God for the Great Leadership Skills and Competences He bestowed through our Son,Friend,Brother and Church member_Dear Mabirizi Emmanuel!
+        </p>
+       <p class="animate-from-bottom titles"> Together with you our dear reader, let us uplift him to shine beyond the stars through the next general elections, to his winning and leadership... until Christ comes back the second time. </p>
+        <p class="animate-from-right titles">Together, we are holding your Right arm to see bliss in your life's journey! We are Team Mabirizi Emmanuel - Oo yeah! </p>
+        </div>
+        <iframe width:"100%" height="520"   src="executives.html#executives" scrolling="no"></iframe>
+      
+          <div id="fundraising" class="black  animate-from-bottom section">
+        <p class="titles title-word-2"> see  more about Executive  Campaign Committee</p>
+       <a href="executives.html#executive"> <button class="donateBtn2 blinking">The Executive Campaign Team</button></a>
+    </div>
+    
+<main class="black">
+  <h2 id="gallery"   class= "titles blinking">Gallery</h2>
+<h5>Enjoy some Happy Moments</h5>
+
+    <lightbox-image dialog-id="lightbox">
+    <img   src='profile-pic.jpg' alt=''>
+  </lightbox-image>
+
+  <lightbox-image dialog-id="lightbox">
+    <img   src='yes2.jpg' alt=''>
+  </lightbox-image>
+
+  <lightbox-image dialog-id="lightbox">
+    <img   src='social2.jpg' alt=''>
+  </lightbox-image>
+
+  <lightbox-image dialog-id="lightbox">
+    <img   src='coverpic.jpg' alt=''>
+  </lightbox-image>
+  <lightbox-image dialog-id="lightbox">
+    <img   src='masterguide3.jpg' alt=''>
+  </lightbox-image>
+
+  <lightbox-image dialog-id="lightbox">
+    <img   src='social.jpg' alt=''>
+  </lightbox-image>
+
+  <lightbox-image dialog-id="lightbox">
+    <img   src='politicalwarfare2.jpg' alt=''>
+  </lightbox-image>
+
+
+<dialog id="lightbox">
+  <form method="dialog">
+    <button>Close </button>
+  </form>
+</dialog>
+
+<button class="gallery-btn text-align:center" onclick="window.location.href='gallery.html'">
+  <i class="fa fa-image"></i> View  Full Gallery
+</button>
+</main>
+
+
+<!--Reading progress-->
+
+<section id="text " style="--name:--text-s;" class="app-container">
+    <div class="read">
+      <div>Reading progress</div>
+    </div>
+    <div class="text" id="posts">
+    
+        <div id="projects" class="animate-from-bottom section">
+        <h2 class="title-word-1 titles">Projects</h2>
+        <p class="animate-from-left">Discover the various projects initiated by Mabirizi Emmanuel to improve our community.</p>
+        <p class="title-word-1 titles" style="color:red">Eco Heal Wooden Belts </p>
+
+
+<a href="https://x.com/wooden_belt?t=JybEBtSL2XhdiQO35fmx_w&s=09" target="_blank" class="x-button">
+  <i class="fa-brands fa-x"></i>
+  Join my X channel
+</a>
+    </div>
+<iframe width="100%" height="400"   src="https://www.youtube.com/embed/kzWC-UeGZmk?si=zunQQxFu9fyCml3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+    
+    
+       <main>  <lightbox-image dialog-id="lightbox" id="ecoheal">
+    <img   src='eco1.jpg' alt=''>
+  </lightbox-image>
+
+    <lightbox-image dialog-id="lightbox">
+    <img   src='eco9.jpg' alt=''>
+  </lightbox-image>
+
+  <lightbox-image dialog-id="lightbox">
+    <img   src='eco3.jpg' alt=''>
+  </lightbox-image>
+
+  <lightbox-image dialog-id="lightbox">
+    <img   src='eco4.jpg' alt=''>
+  </lightbox-image>
+  <lightbox-image dialog-id="lightbox">
+    <img   src='eco5.jpg' alt=''>
+  </lightbox-image>
+  <lightbox-image dialog-id="lightbox">
+    <img   src='eco6.jpg' alt=''>
+     </lightbox-image>
+    <lightbox-image dialog-id="lightbox">
+    <img   src='eco10.jpg' alt=''>
+  </lightbox-image>
+       <lightbox-image dialog-id="lightbox">
+    <img   src='ecoEma.jpg' alt=''>
+  </lightbox-image>
+    <dialog id="lightbox">
+  <form method="dialog">
+    <button>Close </button>
+  </form>
+</dialog>
+
+</main>
+
+
+       <section class="black">
+  <div class="dd">
+    <button class="dd-btn titles"> Introduction to Eco Heal! </button>
+    <div class="dd-content">
+      <h1 class="titles">Introducing the EcoHeal Wooden Belt</h1>
+      <h6 style="display:inline">tap to see more</h6>
+<p>
+Revolutionizing the world of accessories, Emash Wooden Belts Ltd. presents the EcoHeal Wooden Belt. Founded by Mabirizi Emmanuel, this innovative product is born out of a passion to create employment opportunities for youth in his community.
+</p>
+
+<h2 class="titles">A Game-Changing Accessory</h2>
+<p>
+Crafted from sustainably-sourced wood, the EcoHeal Wooden Belt offers a natural, eco-friendly alternative to traditional metal-buckled belts. This pioneering design...
+<button class="gallery-btn" onclick="window.location.href='ecoheal.html'" style="background-color:red">
+  <i class="fa fa-belt"></i> View  Full Story
+</button>
+
+</p>
+<button class="gallery-btn" onclick="window.location.href='gallery.html#ecoheal'">
+  <i class="fa fa-image"></i> View  in Gallery
+</button>
+    </div>
+  </div>
+
+
+</section>
+    
+    
+    
+    
+            <div id="projects" class="animate-from-bottom section">
+    <h1 class="title-word-1 titles" id="leadership">Mabirizi's Leadership in the SDA Church</h1>
+<a href="https://www.nadadventist.org/about-our-church/who-are-adventists" target="_blank"><button>who are Seventh-day Adventists?</button></a>
+<p class="animate-from-bottom">Mabirizi Emmanuel's leadership journey extends beyond his entrepreneurial and political endeavors. He has also played a significant role in the Seventh-day Adventist (SDA) Church, specifically in the Nabbingo SDA Busega district.</p>
+
+
+<p class="animate-from-left">Following the previous elections, Mabirizi was elected as a youth leader, a position that enabled him to mobilize and inspire his fellow youths. Under his leadership, he initiated a <span style="font-weight:bold; text-decoration: italics; font-size:18px;font-family:lato">Master Guide class</span>, which provided a platform for young people to develop their skills and character.</p>
+<a href="https://www.adventist.org/beliefs" target="_blank"><button>what do  Seventh-day Adventists Believe?</button></a>
+</div>
+<!-- Carousel goes here -->
+<div class="carousel-container">
+<div class="carousel">
+<div class="carousel-item">
+<a href="designer2.html" target="_blank">
+<img  src="masterguide4.jpg" alt="masterguide2">
+<p></p>
+</a>
+</div>
+<div class="carousel-item">
+<a href="designer2.html" target="_blank">
+<img  src="masterguide6.jpg" alt="Master Guide Emmanuel">
+<p></p>
+</a>
+</div>
+<div class="carousel-item">
+<a href="designer2.html" target="_blank">
+<img  src="masterguide1.jpg" alt="Master Guide Emmanuel">
+<p></p>
+</a>
+</div>
+<div class="carousel-item">
+<a href="designer2.html" target="_blank">
+<img src="masterguide3.jpg" alt="Master Guide Emmanuel">
+<p></p>
+</a>
+</div>
+<div class="carousel-item">
+<a href="designer2.html" target="_blank">
+<img src="masterguide4.jpg" alt="mg">
+<p></p>
+</a>
+</div>
+<div class="carousel-item">
+<a href="designer2.html" target="_blank">
+<img src="yes1.jpg" alt="Amen">
+<p></p>
+</a>
+</div>
+
+<div class="carousel-nav">
+<button class="prev-btn">&lt;</button>
+<button class="next-btn">&gt;</button>
+</div>
+</div>
+</div>
+
+
+  <section style="width:95%;height:280px" class="black">
+  <h1 style="text-align: center; color:gold" > Mp Emmanuel Master guide</h1>
+  	            <img   src="mg1.jpg" alt="masterguide Emma" style="width:100%; height:100%"><br>
+  </section>
+  
+
+             <div id="projects" class="animate-from-bottom section">
+      <h3 class="titles animate-from-bottom">Empowering the Youth</h3>
+
+<p class="animate-from-bottom">Through this initiative, Mabirizi demonstrated his commitment to empowering the youth and fostering their spiritual growth. His leadership skills were further honed through this experience, equipping him to take on additional responsibilities within the church.</p>
+</div>
+
+          <div id="projects" class="animate-from-bottom section">
+<h3 class="titles title-word-2">Musical Contributions</h3>
+
+<p class="animate-from-top">In addition to his role as a youth leader, Mabirizi has also served the SDA Church as a pianist. His musical talents have been a blessing to the congregation, providing a meaningful way to worship and express gratitude to God.</p> </div>
+<div>
+  <iframe width="300" height="500" loading="lazy"   src="https://www.youtube.com/embed/zfQblf_qu_A?si=T0KNo_eDsVbPos-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+</div>
+<div>
+  <iframe width="300" height="500"  src="https://www.youtube.com/embed/eqinYn3UxWY?si=eg6v_0obobOHA-kf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+</div>
+
+  <h1 class="titles" id="activities">Activities</h1>
+<section class="black" >
+   <div class="dd">
+    <button class="dd-btn"> Health Marathon! </button>
+    <div class="dd-content">
+     
+        <div class="gallery-wrapper">
+<img src="activity1.jpg" alt="Tour 1">
+<img   src="activity2.jpg" alt="Tour 2">
+<img   src="yes2.jpg" alt="Tour 3">
+
+</section>
+<section class="black" >
+   <div class="dd">
+    <button class="dd-btn"> Busiro East Football Tournament </button>
+    <div class="dd-content">
+        <div class="gallery-wrapper">
+<img  src="activity3.jpg" alt="Tour 3">
+<img   src="yes1.jpg" alt="Tour 3">
+
+</section>
+<section class="black" >
+   <div class="dd">
+    <button class="dd-btn"> Busiro East Gospel Music Competitions </button>
+    <div class="dd-content">
+     
+        <div class="gallery-wrapper">
+<img src="activity4.jpg" alt="Tour 3">
+<img   src="music1.jpg" alt="Tour 3">
+<img   src="music2.jpg" alt="Tour 3">
+</div>
+ </section>
+ <div class="gallery-wrapper">
+  <h5 class="mode-switch">May God Empower you Emmanuel in your journey to Bless our Nation 🇺🇬</h5>
+
+<img  src="yes2.jpg" alt="Tour 2">
+
+</div>
+
+
+<div>
+<p class="animate-from-top"><span style="font-family:timesNewRoman;font-weight:bold;color:red">Mabirizi's dedication to the SDA Church and his community</span> is a testament to his strong faith and commitment to serving others. His leadership and musical contributions have made a positive impact on those around him, and his influence continues to inspire and uplift others.</p>
+
+      <p class="lead title-word-1">Your donation will help Mp Mabirizi Emmanuel continue his tireless efforts to support the community and bring about positive change.</p>
+    <p class="emphasis animate-from-bottom">Every contribution, no matter how big or small, counts. Your donation will go directly towards supporting Emmanuel's initiatives that benefit the most vulnerable members of our society.</p>
+    <p class="highlight animate-from-top">By donating, you will be helping to:</p>
+      
+      
+                <div id="projects" class="animate-from-bottom section">
+             <h2 class="titles animate-from-bottom">Make a Difference</h2>
+        <p class="animate-from-right">Your donation will help us achieve our mission to support the community by Winning the forth coming Elections</p>
+    <ul style="list-style:none title-word-2">
+
+        <ul class="more">
+           <li>
+                 <span class="tooltip"> 
+      <span class="tooltip-content"> John 14:6 Jesus The Way,  Revelation 14:6-13        The Three Angels,  Exodus 31:13     The Sabbath,  Exodus 20    The Law... </span>
+Uplift The Seventh day Adventist denomination and purpose of spreading the three angles message</span> through Parliamentary power.</li>
+            <li>Provide education and skills training to underprivileged youth.</li>
+            <li class="animate-from-bottom">Empower Youth, women and girls through economic empowerment.
+                <span class="tooltip"> 
+      <span class="tooltip-content">  Exciting! Isn't it?  Explore More about Eco Heal Belts Project by clicking 'More'</span>
+    programs like Eco Heal wooden Belts </span> and <a href="index.html#projects"> <button style="padding:5px; border:none; border-radius:5px">More</button></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+</section>
+
+    <div id="social" class="animate-from-bottom section">
+        <h2 class="titles title-word-1">Social Life</h2>
+        <p class="animate-from-bottom">Follow Mabirizi Emmanuel's social activities and community engagements:</p>
+
+        <p class="animate-from-top">Follow Emmanuel's Activities on His Facebook page</p>
+       <button onclick="window.open('https://www.facebook.com/profile.php?id=100063638752938', '_blank')" class="facebook-button">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  </svg> Follow on Facebook
+</button> 
+
+<a href="https://x.com/wooden_belt?t=JybEBtSL2XhdiQO35fmx_w&s=09" target="_blank" class="x-button">
+  <i class="fa-brands fa-x"></i>
+  Join my X channel
+</a>
+
+<p>
+<button class="gallery-btn" onclick="window.location.href='gallery.html'">
+  <i class="fa fa-image"></i> View  Full Gallery
+</button>
+</p>
+        </div>
+        
+        
+ <!--  Carousel images -->
+
+    
+
+
+
+    
+
+<section id="text " style="--name:--text-s;" class="app-container">
+  <h2 class="titles animate-from-bottom" style="color:gold">Previous Performance</h2>
+
+<h2 class="animate-from-top titles"style="color:orange">Emmanuel's Performance</h2>
+<h3 style="color:grey">scroll down</h3>
+<h5 style="color:grey; opacity:0.5; font-family:lato">The page below is an external website-donations made through visible polls don't come to us</h5>
+<iframe loading="lazy"    class="clip-both " src="https://visiblepolls.org/ug/2021-general-election/constituencies/busiro-east-154/"></iframe>
+<h5 style="color:grey; opacity:0.5; font-family:lato">The end of external page</h5>
+</section>
+    
+    
+
+    <div id="donations" class="animate-from-bottom section" >
+        <h2 id="donate" class="titles animate-from-bottom">Donations</h2>
+    <h2 class="title-word-1">Join Hands to Make a Difference</h2>
+    
+    
+    <div>
+    <p class="call-to-action title-word-3">Donate today and be part of the movement that is dedicated to creating a brighter future for all.</p>
+           <a href="donations.html"> <button class="donateBtn2 blinking animate-from-bottom">Donate Now</button></a>
+   
+</div>
+
+
+    </div>  
+
+
+
+ 
+        <!-- footer 2 -->
+
+<footer>
+    <div class="footer-body">
+      <div class="blinking"> <a href="#aboutEma.html" style="text-decoration:none; color: cyan">
+      <button class="profile-btn ">
+        <img src="profile-pic.jpg" />
+        
+      </button> MP Mabirizi Emmanuel for Busiro East🇺🇬  </a></div>
+      <div>
+<p >Emmanuel is a looking forward to re-campaigning for the general elections for the post of Member of Parliament of Uganda, he previously managed to know his weakness especially in terms of finances! and with confidence, Emmanuel comes back 10 times a competitive candidate for this post! He's relying on donations to sustain all his operations. Your support enables him to be competent throught the forth coming elections! Kindly consider donating to help us win the Victory!
+ Your Power! Is My Power!</p>
+      <p>  <ul>
+          <li><a href="aboutEma.html"> About Mp Emmanuel </a></li>
+          <li class="blinking"><a href="whatsapp://send?phone=+256783101345&text=Hello, I really want you to design me a website and/ or an app!" target="_blank"> Contact Web Master</a></li>
+          <li><a href='termsandconditions.html'> Terms & Conditions </a></li>
+</p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2025 MP Busiro East to be  Mabirizi Emmanuel.
+    website Built and Designed By:
+    <p class="blinking titles"><a href="https://kisitueric.github.io" class="blinking">@erikis.  </a></p>  <p class="black">All rights reserved.</p>
+    </div>
+  </footer>
+ 
+    <button class="back-btn">&#8593;To Top</button> 
+
+<!-- partial lozad -->
+  <script  src="script.js"></script>
+  
+</body>
+</html>
