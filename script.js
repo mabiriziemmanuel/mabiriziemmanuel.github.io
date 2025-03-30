@@ -1,4 +1,8 @@
-    
+   
+
+
+
+
    
    class LightBoxImage extends HTMLElement {
   get dialog() {
@@ -314,3 +318,94 @@ behavior: 'smooth'
         const date =document.getElementById('date').innerHTML=
 "Date Today is:"+" "+tim;
     
+    // PDF Viewer Functions
+    function openPDF(pdfUrl) {
+      const pdfFrame = document.getElementById('pdfFrame');
+      pdfFrame.src = pdfUrl;
+      document.getElementById('overlay').classList.add('show');
+      document.getElementById('pdfViewer').classList.add('show');
+    }
+
+    function closePDF() {
+      const pdfFrame = document.getElementById('pdfFrame');
+      pdfFrame.src = ""; // Clear iframe source for performance
+      document.getElementById('overlay').classList.remove('show');
+      document.getElementById('pdfViewer').classList.remove('show');
+    }
+
+    // Social Media Share Functions
+    function shareToTwitter() {
+      const url = "https://mabiriziemmanuel.com";
+      const text = "Check out our platform!";
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, "_blank");
+    }
+
+    function shareToFacebook() {
+      const url = "https://mabiriziemmanuel.com";
+      window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
+    }
+
+    function shareToWhatsApp() {
+      const url = "https://mabiriziemmanuel.com";
+      const text = "Check out our platform!";
+      window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + url)}`, "_blank");
+    }
+
+    function shareToTelegram() {
+      const url = "https://mabiriziemmanuel.com";
+      const text = "Check out our platform!";
+      window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, "_blank");
+    }
+
+    // Share Content from Preview
+    function toggleDropdown() {
+  const dropdown = document.getElementById("shareDropdown");
+  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+function shareToWhatsApp() {
+  const url = "https://mabiriziemmanuel.com";
+  const text = "Check out this amazing platform!";
+  window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + url)}`, "_blank");
+}
+
+function shareToTwitter() {
+  const url = "https://mabiriziemmanuel.com";
+  const text = "Check out this amazing platform!";
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, "_blank");
+}
+
+function shareToFacebook() {
+  const url = "https://mabiriziemmanuel.com";
+  window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
+}
+
+function shareToTelegram() {
+  const url = "https://mabiriziemmanuel.com";
+  const text = "Check out this amazing platform!";
+  window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, "_blank");
+}
+function shareContent(platform) {
+  const url = "https://mabiriziemmanuel.com";
+  const text = "Check out this amazing platform!";
+  const image = "https://mabiriziemmanuel.github.io/profile-pic.jpg"; // Hosted image URL
+
+  let shareURL = "";
+
+  switch (platform) {
+    case 'WhatsApp':
+      shareURL = `https://wa.me/?text=${encodeURIComponent(text)}%0A${encodeURIComponent(url)}%0A${encodeURIComponent(image)}`;
+      break;
+    case 'Twitter':
+      shareURL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+      break;
+    case 'Facebook':
+      shareURL = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`;
+      break;
+    case 'Telegram':
+      shareURL = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+      break;
+  }
+
+  window.open(shareURL, "_blank");
+}

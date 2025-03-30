@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Executive Members for Emmanuel's Campaign</title>
-        
-    
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     
     <style>
         body {
@@ -118,6 +118,7 @@
     transform: translateX(-100%);
   }
 }
+/*
 .profile-btn {
   padding: 0;
   border: 0;
@@ -155,7 +156,7 @@ section {
   --d: 20s; /* animation duration*/
   --n: 8; /* number of speakers*/
   
-  font: 20px/1.6 "Source Code Pro", Inconsolata, Menlo, monospace;
+/*  font: 20px/1.6 "Source Code Pro", Inconsolata, Menlo, monospace;
   color: rgb(34 34 34);
   margin: 3em 1em;
   display: grid;
@@ -191,7 +192,8 @@ a span {
   @starting-style {
     --_r: 100turn;
   }
-}
+} 
+/*
 a:hover {
   color: #fff;
   background-size: 100% 100%;
@@ -207,18 +209,336 @@ ul:has(a:hover) li:not(:has(a:hover)) {
 
 span#cecil	  { --i:1;background: url('exe2.jpg') -70px -55px; }
 span#eric	{ --i:2;background: url('eric.jpg') -48px -78px; }
-span#brad 	{ --i:3;background: url('https://www.cssday.nl/pix/speakers/brad.jpg') -70px -68px; }
-span#ana 	  { --i:4;background: url('https://www.cssday.nl/pix/speakers/ana.jpg') -77px -58px; }
-span#john 	{ --i:5;background: url('https://www.cssday.nl/pix/speakers/john.jpg') -60px -60px; }
-span#bramus	{ --i:6;background: url('https://www.cssday.nl/pix/speakers/bramus.jpg') -45px -45px; }
-span#adam 	{ --i:7;background: url('https://www.cssday.nl/pix/speakers/adam.jpg')  -82px -58px; }
-span#miriam	{ --i:8;background: url('https://www.cssday.nl/pix/speakers/miriam.jpg') -75px -45px; }
+span#brad 	{ --i:3;background: url('.jpg') -70px -68px; }
+span#ana 	  { --i:4;background: url('.jpg') -77px -58px; }
+span#john 	{ --i:5;background: url('.jpg') -60px -60px; }
+span#bramus	{ --i:6;background: url('.jpg') -45px -45px; }
+span#adam 	{ --i:7;background: url('.jpg')  -82px -58px; }
+span#miriam	{ --i:8;background: url('.jpg') -75px -45px; }
+*/
 
  .titles{text-shadow: 5px 7px 5px rgba(0, 0, 0, 0.5);}
+  
+    
+  
+    .team-member {
+      width: 93%;
+      margin: 5px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .profile-picture {
+      max-width: 100%;
+      height: auto;
+
+      border-radius: 10px;
+    }
+
+    .bio-info, .leadership-title, .contribution {
+      margin-bottom: 10px;
+    }
+
+    .social-media-links {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .social-media-icon {
+      font-size: 24px;
+      margin: 10px;
+    }
+
+    footer { background-color: lightblue;
+    }
+    footer>p{
+      color:#34495e;
+    }
+    
+        footer li > a {
+      color: black;
+      text-decoration: none;
+      list-style-type: none;
+      margin-bottom: 7px;
+    }
+    
+    
+    /*whatsapp*/
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.whatsapp-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.whatsapp-home-icon {
+    position: fixed;
+    top: 80%;
+    right: 5%;
+    font-size: 50px;
+    color: #25D366;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    animation: slideInFromRight 0.5s ease forwards; /* Apply animation */
+}
+
+.whatsapp-home-icon span {
+    margin-left: 10px;
+    font-size: 16px;
+    color: green;
+}
+        #whatsapp-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 480px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1000;
+            flex-direction: column;
+        }
+        .chat-header {
+            background-color: #075E54;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .chat-header .status {
+            font-size: 14px;
+            color: #D5F5E3;
+            position: absolute;
+            top: 10%;
+            right: 50%;
+        }
+        .chat-header .close-popup {
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #ece5dd;
+        }
+        .message {
+            display: flex;
+            align-items: flex-start;
+            margin: 10px 0;
+            max-width: 70%;
+        }
+        .message img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .message-bubble {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            display: inline-block;
+            position: relative;
+        }
+        .message.sent {
+            margin-left: auto;
+            position: relative;
+        }
+        .message.sent .blue-tick {
+            font-size: 12px;
+            color: #34B7F1; /* WhatsApp blue tick color */
+            position: absolute;
+            bottom: 5px;
+            left: -15px;
+        }
+        .message.sent .message-bubble {
+            background-color: #DCF8C6;
+        }
+        .chat-footer {
+            display: flex;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #ddd;
+            align-items: center;
+        }
+        .chat-footer input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            margin-right: 10px;
+            outline: none;
+        }
+        .chat-footer button {
+            background-color: #075E54;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .emoji-icon {
+            font-size: 24px;
+            color: #075E54;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .emoji-popup {
+            display: none;
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+        }
+        .emoji-popup span {
+            font-size: 24px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .typing {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-right: 2px solid transparent; }
+            50% { border-right: 2px solid black; }
+        }
+        
+        
+                .form-wrapper {
+            background-color: skyblue;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            
+        }
+
+        .form-wrapper h2 {
+            text-align: center;
+            color: #2980b9;
+            margin-bottom: 20px;
+            width:90%
+        }
+
+        .form-input-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-input-group input,
+        .form-input-group textarea {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+            width: 90%;
+            outline: none;
+            background: #fff;
+        }
+
+        .form-input-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .form-button-container input[type="button"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-button-submit {
+            background-color: #2980b9;
+        }
+
+        .form-button-submit:hover {
+            background-color: #1e6fa5;
+        }
+
+        .form-button-sms {
+            background-color: #e74c3c;
+        }
+
+        .form-button-sms:hover {
+            background-color: #c0392b;
+        }
+
+        .form-separator {
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        /* Focus styles for inputs */
+        .form-input-group input:focus,
+        .form-input-group textarea:focus {
+            border-color: #6dd5fa;
+            box-shadow: 0 0 5px rgba(109, 213, 250, 0.5);
+        }
+
+        /* Placeholder Styling */
+        ::placeholder {
+            color: #bbb;
+        }
 
 
-</style>
-</head>
+
+
+        </style>
+        </head>
 <body>
 <header>
 <nav aria-label="breadcrumb">
@@ -235,7 +555,90 @@ Donate Page</a></li>
  <div class="ticker titles">
 <span> <a href ="designer.html" style= "text-decoration:none; font-family:droid sans; font-weight: bold; color:white;       background: linear-gradient(to top, white, indigo); padding:7px"> &nbsp;This is the Executes'&nbsp;page!&nbsp;&nbsp;&nbsp;We thank God for inspiring you to  support Emmanuel&nbsp;&nbsp;&nbsp;&nbsp;Please consider donating to support him in the next Campaign, follow the prompts and donate succesfully   &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;May God&nbsp;&nbsp;&nbsp;Reward you abundantly!!!&nbsp;&nbsp; Tap to See more!</a></span>
 </div>  
+<main>
+  <h1>Executive Members</h1>
+  <div class="team-member" id="executives">
+    <h2>Mabirizi Emmanuel</h2>
+    <img src="profile-pic.jpg" alt="Mabirizi Emmanuel" class="profile-picture">
+    <p class="bio-info">Bio info: Mabirizi Emmanuel is a dedicated leader with a passion for community development.</p>
+    <p class="leadership-title"></p>
+    <p class="contribution">Contribution to MP to be: Mabirizi Emmanuel aims to improve education and healthcare in the community.</p>
+    <section class="whatsapp-container">
+    <!-- WhatsApp Icon as the Button -->
+    <div class="whatsapp-home-icon" id="whatsapp-home-icon">
+                    <i class="fab fa-whatsapp"></i>
+        <span>Contact us</span>
+    </div>
 
+    <div id="whatsapp-popup">
+        <div class="chat-header">
+            <div style="display: flex; align-items: center;">
+                <img src="profile-pic.jpg" alt="Profile Picture"> <!-- Replace with your image URL -->
+                <span>Mp Mabirizi Emmanuel</span>
+            </div>
+            <span class="status"><span style="color:cyan">°</span>&nbsp;Online</span>
+            <span class="close-popup" id="close-popup">&times;</span>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message received">
+                <img src="profile-pic.jpg" alt="Avatar">
+                <div class="message-bubble typing" id="typing-effect">
+                    "Welcome! Thank you for reaching out. Please share your thoughts or inquiries, and I’ll assist you."
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <i class="fa fa-smile emoji-icon" id="emoji-icon"></i>
+            <input id="message-input" type="text" placeholder="Type a message...">
+            <button id="send-button">Send</button>
+        </div>
+        <div class="emoji-popup" id="emoji-popup">
+            <span>😊</span>
+            <span>❤️</span>
+            <span>👍</span>
+        </div>
+    </div>
+</section>
+    
+    <div class="social-media-links">
+      <a href="https://www.facebook.com/profile.php?id=100063638752938" target="_blank"><i class="fab fa-facebook social-media-icon"></i></a>
+      <a href="whatsapp://send?phone=+256783101345&text=Hello, I really want you to design me a website and/ or an app!" target="_blank"><i class="fab fa-whatsapp social-media-icon"></i></a>
+      <a href="https://youtu.be/p9t0g9NkFp4?si=ji_qxraK7vSm7lOp" target="_blank"><i class="fab fa-youtube social-media-icon"></i></a>
+      <a href="https://x.com/wooden_belt?t=JybEBtSL2XhdiQO35fmx_w&s=09" target="_blank"><i class="fab fa-twitter social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram social-media-icon"></i></a>
+    </div>
+  </div>
+  <div class="team-member">
+    <h2>Cecil Smith</h2>
+    <img src="exe2.jpg" alt="Cecil Smith" class="profile-picture">
+    <p class="bio-info">Bio info: Cecil Smith is a seasoned professional with expertise in project management.</p>
+    <p class="leadership-title">Leadership Title: Executive Member</p>
+    <p class="contribution">Contribution to MP to be:  Aims to improve infrastructure development in the community.</p>
+    <div class="social-media-links">
+      <a href="#" target="_blank"><i class="fab fa-facebook social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-whatsapp social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram social-media-icon"></i></a>
+    </div>
+  </div>
+  <div class="team-member">
+    <h2>Eric Kisitu </h2>
+    <img src="eric.jpg" alt="Eric" class="profile-picture">
+    <p class="bio-info">Bio info: Mr. Eric  is an IT professional with experience in front end and backend web development and design, UI designer, Mobile app development and an IT consultant.</p>
+    <p class="leadership-title">Leadership Title: Executive Member</p>
+    <p class="contribution">Contribution to MP to be: Web developer and UI design</p>
+    <div class="social-media-links">
+      <a href="#" target="_blank"><i class="fab fa-facebook social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-whatsapp social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter social-media-icon"></i></a>
+
+</main>
+
+
+
+<!--
 <h1 class="titles">Execute Committe</h1>
 <section>
   <ul>
@@ -255,7 +658,7 @@ Donate Page</a></li>
 
 
 
-
+<!--
 <div class="messages-section">
   <div class="" id="testimonies">
     <h3 class="titles">Messages</h3>
@@ -349,5 +752,177 @@ Emmanuel is a great leader! You inspire me dear.
 </div>
 </div>
 </div>
+-->
+<hr>
+<footer>
+ <p> For Inquiries and help
+  </p>
+  <p>Whatsapp the Mp on the floating Whatsapp contact us button on your bottom right</p>
+  <p>Or</p>
+        <i class="material-icons">email</i> info@mabiriziemmanuel.com
+        <p>Or</p>
+     <div class="social-media-links">
+      <a href="https://www.facebook.com/profile.php?id=100063638752938" target="_blank"><i class="fab fa-facebook social-media-icon"></i></a>
+      <a href="whatsapp://send?phone=+256783101345&text=Hello, I really want you to design me a website and/ or an app!" target="_blank"><i class="fab fa-whatsapp social-media-icon"></i></a>
+      <a href="https://youtu.be/p9t0g9NkFp4?si=ji_qxraK7vSm7lOp" target="_blank"><i class="fab fa-youtube social-media-icon"></i></a>
+      <a href="https://x.com/wooden_belt?t=JybEBtSL2XhdiQO35fmx_w&s=09" target="_blank"><i class="fab fa-twitter social-media-icon"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram social-media-icon"></i></a>
+    </div>
+    <p>Or</p>
+    
+     <div class="form-wrapper">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <div class="form-input-group">
+                <input type="text" placeholder="Your Name" id="contact-name" required>
+            </div>
+            <div class="form-input-group">
+                <input type="email" placeholder="Your Email" id="contact-email" required>
+            </div>
+            <div class="form-input-group">
+                <input type="number" placeholder="Your Phone Number" id="contact-phone" required>
+            </div>
+            <div class="form-input-group">
+                <textarea placeholder="Write your message here..." id="contact-message" required></textarea>
+            </div>
+            <div class="form-button-container">
+                <input type="button" value="Submit" class="form-button-submit" onclick="sendEmail()">
+                <span class="form-separator">or</span>
+                <input type="button" value="Send as SMS" class="form-button-sms" onclick="sendSMS()">
+            </div>
+        </form>
+    </div>
+        <p>  <ul>
+          <li><a href="aboutEma.html"> About Mp Emmanuel </a></li>
+       <h4 style="color:blue">Website designed by: ©Yo Websites Master co.</h4> 
+          <p class="blinking"><a href="whatsapp://send?phone=+256783101345&text=Hello, I really want you to design me a website and/ or an app!" target="_blank"> For Booking >> Contact Website designer </a></p>
+          <li><a href='termsandconditions.html'> Terms & Conditions </a></li>
+</p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2025 MP Busiro East to be  Mabirizi Emmanuel.
+<p class="black">All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+      const whatsappHomeIcon = document.getElementById('whatsapp-home-icon');
+const whatsappPopup = document.getElementById('whatsapp-popup');
+const closePopupButton = document.getElementById('close-popup');
+const sendButton = document.getElementById('send-button');
+const messageInput = document.getElementById('message-input');
+const chatMessages = document.getElementById('chat-messages');
+const typingEffect = document.getElementById('typing-effect');
+const emojiPopup = document.getElementById('emoji-popup');
+const emojiIcon = document.getElementById('emoji-icon');
+
+// Show the chat pop-up
+whatsappHomeIcon.addEventListener('click', () => {
+    whatsappPopup.style.display = 'flex';
+});
+
+// Close the chat pop-up
+closePopupButton.addEventListener('click', () => {
+    whatsappPopup.style.display = 'none';
+});
+
+// Add message to the chat window and then redirect to WhatsApp API
+sendButton.addEventListener('click', () => {
+    const message = messageInput.value.trim();
+    if (message) {
+        // Display message in the chat window
+        const userMessage = document.createElement('div');
+        userMessage.classList.add('message', 'sent');
+        userMessage.innerHTML = `
+            <div class="message-bubble">${message}</div>
+            <span class="blue-tick">✔✔</span>
+        `;
+        chatMessages.appendChild(userMessage);
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll to the latest message
+
+        // Display automated reply thanking the user
+        setTimeout(() => {
+            const replyMessage = document.createElement('div');
+            replyMessage.classList.add('message', 'received');
+            replyMessage.innerHTML = `
+                <img src="profile-pic.jpg" alt="Avatar">
+                <div class="message-bubble">Thank you for your valuable feedback. Together, we can make a difference for our community!</div>
+            `;
+            chatMessages.appendChild(replyMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1000);
+
+        // Redirect to WhatsApp API
+        const phoneNumber = '+256758296217'; // Updated WhatsApp number
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+
+        // Clear the input field
+        messageInput.value = '';
+    } else {
+        alert('Please enter a message.');
+    }
+});
+
+// Emoji popup toggle
+emojiIcon.addEventListener('click', () => {
+    emojiPopup.style.display = emojiPopup.style.display === 'block' ? 'none' : 'block';
+});
+
+// Append emoji to input field
+emojiPopup.addEventListener('click', (event) => {
+    if (event.target.tagName === 'SPAN') {
+        messageInput.value += event.target.textContent;
+        emojiPopup.style.display = 'none'; // Close emoji popup after selection
+    }
+});
+
+// Remove typing effect after animation
+setTimeout(() => {
+    typingEffect.classList.remove('typing');
+}, 3000);
+const whatsappIcon = document.querySelector('.whatsapp-home-icon');
+
+// Add scroll event listener
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) { // Change "200" to the desired scroll height
+        whatsappIcon.style.display = 'flex'; // Show the button
+        whatsappIcon.style.animation = 'slideInFromRight 0.5s ease forwards'; // Trigger the animation
+    } else {
+        whatsappIcon.style.display = 'none'; // Hide the button
+    }
+});
+
+// Initially hide the button
+whatsappIcon.style.display = 'none';
+
+        // Email Submission Function
+        function sendEmail() {
+            const name = document.getElementById("contact-name").value;
+            const email = document.getElementById("contact-email").value;
+            const message = document.getElementById("contact-message").value;
+
+            // Create email content
+            const subject = encodeURIComponent("Mega Fundraising Campaign for Mp Mabirizi Emmanuel @ mabiriziemmanuel.com");
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+            // Send email using mailto
+            window.open(`mailto:info@mabiriziemmanuel.com?subject=${subject}&body=${body}`);
+        }
+
+        // SMS Submission Function
+        function sendSMS() {
+            const name = document.getElementById("contact-name").value;
+            const phone = document.getElementById("contact-phone").value;
+            const message = document.getElementById("contact-message").value;
+
+            // Create SMS content
+            const smsBody = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nMessage: ${message}`);
+
+            // Open SMS app
+            window.open(`sms:0753484060?body=${smsBody}`);
+        }
+  </script>
 </body>
 </html>
