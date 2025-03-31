@@ -657,7 +657,9 @@ img {loading: lazy}
     }
 
     }
-
+dd-content>img{
+  width: 100%;
+}
 
 .gallery-wrapper img {
 width: 100%;
@@ -697,7 +699,7 @@ main {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   vertical-align: bottom;
   border-radius: 1rem;
