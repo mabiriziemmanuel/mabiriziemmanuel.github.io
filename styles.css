@@ -415,12 +415,13 @@
     align-items: center;
     opacity: 0; /* Initially hidden */
     animation: slideInFromRight 0.5s ease forwards; /* Apply animation */
+    
 }
 
 .whatsapp-home-icon span {
     margin-left: 10px;
     font-size: 16px;
-    color: lightblue;
+    color:#25D366 ;
 }
         #whatsapp-popup {
             display: none;
@@ -1639,7 +1640,7 @@ footer {
     .footer-body > div {
       float: left;
       padding: 20px;
-      color:gold;
+      color:white;
     }
         .footer-body  div p{
     
@@ -1665,7 +1666,7 @@ footer {
       
     }
     .footer-body li > a {
-      color: gold;
+      color: white;
       text-decoration: none;
       margin-bottom: 7px;
     }
