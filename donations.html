@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Fundraising - Donate to Mp Mabirizi Emmanuel</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Righteous&amp;display=swap'>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -119,15 +123,69 @@ padding: 20px;
             margin-top: 0;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            clear: both;
-        }
-        p {color: grey;}
-         ul>li {color: grey;}
+        
+    footer {
+      color: #fff;
+      background: #333;
+      position: relative; /* required to position the copyright at the bottom */
+      font-size: 80%;
+      width: 100%;
+    }
+    .footer-copyright {
+      width: 100%;
+      height: 40px;
+      background: #111;
+      /* positions the copyright at the bottom of the footer */
+      padding: 10px;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+    .footer-body {
+      margin-bottom: 40px;
+    }
+      /* the clearfix hack */
+    .footer-body::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    /* float the divs */
+    .footer-body > div {
+      float: left;
+      padding: 20px;
+      color:white;
+    }
+        .footer-body  div p{
+    
+      padding: 10px;
+      color:Silver;
+    }
+    /* sets the width of the first column */
+    .footer-body > div:first-child {
+      font-size: 150%;
+      width: 35%;
+      text-align: center;
+    }
+    /* sets the width of the second column */
+    .footer-body > div:last-child {
+      width: 65%;
+      
+    }
+    .footer-body ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+      
+    }
+    .footer-body li > a {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 7px;
+    }
+    
+    /*donations words*/
          /*light Box */
              .lightbox {
       display: table; /* helps us center the lightbox-content */
@@ -252,6 +310,142 @@ padding: 20px;
   }
 }
 
+                .form-wrapper {
+            background-color: skyblue;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            width: 85%;
+            
+        }
+
+        .form-wrapper h2 {
+            text-align: center;
+            color: #2980b9;
+            margin-bottom: 20px;
+            width:90%
+        }
+
+        .form-input-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-input-group input,
+        .form-input-group textarea {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+            width: 90%;
+            outline: none;
+            background: #fff;
+        }
+
+        .form-input-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .form-button-container input[type="button"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-button-submit {
+            background-color: #2980b9;
+        }
+
+        .form-button-submit:hover {
+            background-color: #1e6fa5;
+        }
+
+        .form-button-sms {
+            background-color: #e74c3c;
+            border-radius: 2rem;
+          padding: 20px;
+        }
+
+        .form-button-sms:hover {
+            background-color: #c348;
+        }
+
+        .form-separator {
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        /* Focus styles for inputs */
+        .form-input-group input:focus,
+        .form-input-group textarea:focus {
+            border-color: #6dd5fa;
+            box-shadow: 0 0 5px rgba(109, 213, 250, 0.5);
+        }
+
+        /* Placeholder Styling */
+        ::placeholder {
+            color: #bbb;
+        }
+        
+       .footer1 { background-color: lightblue;
+    }
+    .footer1>p{
+      color:#34495e;
+    }
+    
+        .footer1 li > a {
+      color: black;
+      text-decoration: none;
+      list-style-type: none;
+      margin-bottom: 7px;
+    }
+        .bio-info, .leadership-title, .contribution {
+      margin-bottom: 10px;
+    }
+
+    .social-media-links {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .social-media-icon {
+      font-size: 24px;
+      margin: 10px;
+    }
+
+   .x-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.x-button:hover {
+  background-color: #1877d3;
+border:1px dotted red;
+  border-radius: 12px;
+}
 
 
     </style>
@@ -279,12 +473,15 @@ padding: 20px;
 <main>
 <section class="donate-form">
   
-<h2 class="titles">Make a Donation</h2>
+<h2 class="titles" style="color:red">Make a Donation</h2>
 <form>
   <label for="name" class="titles">Name</label>
   <input type="text" id="name" placeholder="enter your name...">
+  <label for="email" class="titles" >Email</label>
+  <input type="email" id="email" placeholder="Enter Email...">
 <label for="amount" class="titles">Donation Amount:</label>
-<input type="number" id="amount" required placeholder="Enter amount in UGX... e.g 2000000">
+
+<input type="number" id="amount" required placeholder="Enter amount ... e.g 2000000">
 <label for="payment-method" class="titles">Payment Method:</label>
 <select id="payment-method" required>
 <option value="">Select Payment Method</option>
@@ -294,13 +491,25 @@ padding: 20px;
 </select>
 </form>
 <button class="donate-btn titles" onclick="lightBox()">Next</button>
+        <p class="title-word-1 titles" style="color:red">Eco Heal Wooden Belts </p>
+        <h3>OR</h3>
+        <h2 style="color: green">Buy Belts as a Donation for as low as shs.60,000 each or above</h2>
+<img src="eco1.jpg">
+
+                    <button type="button"  class="form-button-sms" onclick="window.open('mailto:info@mabiriziemmanuel.com?subject=Buying Eco Heal Wooden Belt&body=Hi, Please place my order, My name is  ')">    <i class="fas fa-gift" style="color:lightblue; font-size:20px"></i> Buy as A Donation <i class="fas fa-shopping-cart" style="color:cyan;font-size:20px"></i></button>
+          <a href="gallery.html#ecoheal" target="_blank" class="x-button">
+  <i class="fa-brands fa-x"></i>
+  See More Belts >>
+</a>        
 </section>
+
+
 <div class="lightbox" id="bank-transfer">
 <a href="designer.html" class="close">CLOSE</a>
 <div class="lightbox-content">
 <img src="profile-pic.jpg" />
 <p id="thanks" style="color:lightblue;font-weight:bolder; font-famil: comicsans;font-size:17.5px"></p>
-<p>Deposit to Account Number:</p>
+<p style="color:white">Deposit to Account Number:</p>
 <p><span style="color:white;font-weight:bolder"> 3 2 0 3 8 7 5 1 4 7</span></p>
 <p> Name:<span style="color:white;font-weight:bolder"> MABIRIZI EMMANUEL</span></p>
 <p>Bank Name: Centenary Bank</p>
@@ -311,14 +520,15 @@ padding: 20px;
 <div class="lightbox-content">
 <img src="profile-pic.jpg" />
 <p id="thanku" style="color:lightblue;font-weight:bolder; font-famil: comicsans;font-size:17.5px"></p>
-<p>Deposit to Mobile Money/Wallet Number: <span style="color:white;font-weight:bolder">+256 758296217</span></p>
+<p style="color:white">Deposit to Mobile Money/Wallet Number: <span style="color:white;font-weight:bolder">
+  +256-758296217</span></p>
 <p>Name: <span style="color:white;font-weight:bolder"> MABIRIZI EMMANUEL</span>
 <p>Network: Airtel - Uganda</p>
 </div>
 </div>
 <p style="color:red" id="Show"></p>
     <section class="impact">
-        <h2 class="titles">Make a Difference</h2>
+        <h2 class="titles" style="color:red">Make a Difference</h2>
         <p class="titles" style="color:black">Your donation will help us achieve our mission to support the community by Winning the forth coming Elections</p>
         <ul>
            <li>
@@ -334,10 +544,92 @@ Uplift The Seventh day Adventist denomination and purpose of spreading the three
         </ul>
     </section>
 </main>
+<div class="footer1 " id="contact">
+   <p> For Inquiries and help
+  </p>
+  <p>Whatsapp the Mp on the floating Whatsapp contact us button on your bottom right</p>
+  <p>Or</p>
+  <p>Email:</p>
+      <p style="color:blue"> <i class="material-icons"></i> <a href="mailto:info@mabiriziemmanuel.com?subject=Contacting The Mp&body=Hi, my name is " target="_blank">info@mabiriziemmanuel.com</a></p>
+        <p>Or</p>
+     <div class="social-media-links">
+      <a href="https://www.facebook.com/profile.php?id=100063638752938" target="_blank"><i class="fab fa-facebook social-media-icon"></i></a>
+      <a href="https://wa.me/256758296217?text=*Hi*%20!%20Iam%20interested%20in%20seeing%20you%20win%20the%20forthcoming%20elections%20dear%20Emmanuel,%20I %20really%20like %20your%20commitment%20towards%20the%20Church%20and%20Busiro%20East%20at%20large!%20*I also%20heard%20your%20need%20for%20Donations,%20your%20Projects%20%20and%20many%20more!*%20%0AHere%20I%20am,%20Let%20us%20talk%20about%20" target="_blank"><i class="fab fa-whatsapp social-media-icon"></i></a>
+      <a href="https://youtu.be/p9t0g9NkFp4?si=ji_qxraK7vSm7lOp" target="_blank"><i class="fab fa-youtube social-media-icon"></i></a>
+      <a href="https://x.com/wooden_belt?t=JybEBtSL2XhdiQO35fmx_w&s=09" target="_blank"><i class="fab fa-twitter social-media-icon"></i></a>
+      <a href="#instagram" target="_blank"><i class="fab fa-instagram social-media-icon"></i></a>
+    </div>
+    <p>Or</p>
+    
+     <div class="form-wrapper">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <div class="form-input-group">
+                <input type="text" placeholder="Your Name" id="contact-name" required>
+            </div>
+            <div class="form-input-group">
+                <input type="email" placeholder="Your Email" id="contact-email" required>
+            </div>
+            <div class="form-input-group">
+                <input type="number" placeholder="Your Phone Number" id="contact-phone" required>
+            </div>
+            <div class="form-input-group">
+                <textarea placeholder="Write your message here..." id="contact-message" required></textarea>
+            </div>
+            <div class="form-button-container">
+                <input type="button" value="Submit" class="form-button-submit" onclick="sendEmail()">
+                <span class="form-separator">or</span>
+                <input type="button" value="Send as SMS" class="form-button-sms" onclick="sendSMS()">
+            </div>
+        </form>
+    </div>
+        <p>  <ul>
+          <p style="color:blue; text-align:center"><a href="aboutEma.html"> About Mp Emmanuel </a></p>
+       <h4 style="color:blue; text-align:center;padding:2px">Website designed by: ©Yo WebMaster co.</h4> 
+          <p class="blinking"><a href="whatsapp://send?phone=+256783101345&text=Hello, I really want you to design me a website and/ or an app!" target="_blank"> For Booking >> Contact Website and Android app designer </a></p>
+
+</p>
+      </div>
+    </div>
+
+    </div>
+
+ 
+        <!-- footer 2 -->
+
 <footer>
-<p>&copy; 2025 Mega Fundraising. All rights reserved.</p>
-<p><a href="designer.html">@erikis</a></p>
-</footer>
+    <div class="footer-body">
+      <div class="blinking"> <a href="#aboutEma.html" style="text-decoration:none; color:  cyan">
+      <button class="profile-btn ">
+        <img src="profile-pic.jpg" />
+        
+      </button> Mabirizi Emmanuel for MP Busiro East🇺🇬  </a></div>
+      <div>
+             <p class="social-media-links">
+      <a href="https://www.facebook.com/profile.php?id=100063638752938" target="_blank"><i class="fab fa-facebook social-media-icon"></i></a>
+      <a href="https://wa.me/256758296217?text=*Hi*%20!%20Iam%20interested%20in%20seeing%20you%20win%20the%20forthcoming%20elections%20dear%20Emmanuel,%20I %20really%20like %20your%20commitment%20towards%20the%20Church%20and%20Busiro%20East%20at%20large!%20*I also%20heard%20your%20need%20for%20Donations,%20your%20Projects%20%20and%20many%20more!*%20%0AHere%20I%20am,%20Let%20us%20talk%20about%20" target="_blank"><i class="fab fa-whatsapp social-media-icon"></i></a>
+      <a href="https://youtu.be/p9t0g9NkFp4?si=ji_qxraK7vSm7lOp" target="_blank"><i class="fab fa-youtube social-media-icon"></i></a>
+      <a href="https://x.com/wooden_belt?t=JybEBtSL2XhdiQO35fmx_w&s=09" target="_blank"><i class="fab fa-twitter social-media-icon"></i></a>
+
+    </p>
+ <ul>
+          <li><a href="aboutEma.html"> About Mp Emmanuel </a></li>
+          <li><a href="mailto:info@mabiriziemmanuel.com?subject=Contacting The Mp&body=Hi, my name is " target="_blank">info@mabiriziemmanuel.com</a></li>
+          <li><a href='termsandconditions.html'> Terms & Conditions </a></li>
+</p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2025 MP Busiro East to be  Mabirizi Emmanuel.
+<p class="black">All rights reserved.</p>
+    </div>
+  </footer>
+ 
+
+    
+ 
+<!-- partial lozad -->
+  
 <script>
 function lightBox() {
 const Payment = document.getElementById("payment-method").value;
@@ -351,17 +643,44 @@ switch (Payment) {
 case "bank-transfer":
 document.getElementById("bank-transfer").style.opacity = 1;
 document.getElementById("bank-transfer").style.zIndex = 1;
-document.getElementById("thanks").innerHTML="Thank you dear" + " "+name +" "+ "for accepting to donate"+" "+ "shs."+" "+ amount;
+document.getElementById("thanks").innerHTML="Thank you dear" + " "+name +" "+ "for accepting to donate"+" "+ "✓ "+" "+ amount;
 break;
 case "mobile-money":
 document.getElementById("mobile-money").style.opacity = 1;
 document.getElementById("mobile-money").style.zIndex = 1;
-document.getElementById("thanku").innerHTML="Thank you dear" + " "+name +" "+ "for accepting to donate"+" "+ "shs."+" "+ amount;
+document.getElementById("thanku").innerHTML="Thank you dear" + " "+name +" "+ "for accepting to donate"+" "+ "✓ "+" "+ amount;
 break;
 default:
 document.getElementById("Show").innerHTML = "Sorry for the inconveniences, PayPal is currently not available.";
 }
 }
+
+        // Email Submission Function
+        function sendEmail() {
+            const name = document.getElementById("contact-name").value;
+            const email = document.getElementById("contact-email").value;
+            const message = document.getElementById("contact-message").value;
+
+            // Create email content
+            const subject = encodeURIComponent("Mega Fundraising Campaign for Mp Mabirizi Emmanuel @ mabiriziemmanuel.com");
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+            // Send email using mailto
+            window.open(`mailto:info@mabiriziemmanuel.com?subject=${subject}&body=${body}`);
+        }
+
+        // SMS Submission Function
+        function sendSMS() {
+            const name = document.getElementById("contact-name").value;
+            const phone = document.getElementById("contact-phone").value;
+            const message = document.getElementById("contact-message").value;
+
+            // Create SMS content
+            const smsBody = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nMessage: ${message}`);
+
+            // Open SMS app
+            window.open(`sms:0753484060?body=${smsBody}`);
+        }
 </script>
 </body>
 </html>

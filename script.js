@@ -249,7 +249,7 @@ function typeWriter() {
     clearInterval(intevalId);
   }
 }
-const intevalId = setInterval(typeWriter, 210);
+const intevalId = setInterval(typeWriter, 150);
 
   //To Top button function
 var backBtn = document.querySelector(".back-btn");
