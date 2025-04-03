@@ -1,17 +1,18 @@
            /*second layout view*/
                    .container {
-            width: 100%;
+            max-width: 100%;
             
-            margin: 0 auto;
+            margin: 0px;
+            border-radius: 1rem;
             padding: 10px;
             text-align: center;
             background-color: #455A64;
-            border-radius: 2rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         }
         
         .hero-section {
-            background-color: #34495e;
+           margin: 20px; background-color: #34495e;
             color: cyan;
             padding: 20px;
             border-radius: 10px 10px 0 0;
@@ -1036,7 +1037,7 @@ position:relative;}
 	}
 }
   body {
-    
+    padding: 1px;
 	margin: 0;
 	display: grid;
 	overflow-x: hidden;
