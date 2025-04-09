@@ -473,6 +473,8 @@ padding: 20px;
           <p><strong>Price per month:</strong> UGX 100,000</p>
           <p><strong>Note:</strong> Payment must be completed before lessons start.</p>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LdOtgsrAAAAAEjSrb_6e9Uoz3_LNargqPsxUQII" data-action="LOGIN"></div>
+        <br/>
         <!-- Submit Button (will show payment instructions before emailing) -->
         <button type="submit" class="submit-button" onclick="submitForm()">Submit</button>
       </form>
@@ -513,6 +515,8 @@ padding: 20px;
     </div>
     <button type="submit" class="submit-button" onclick="submitChat()">Send</button>
   </div>
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+      
   <script>
     // ---------- SIGNUP FORM - Toggle Children Info ---------- 
     function toggleChildrenInput() {

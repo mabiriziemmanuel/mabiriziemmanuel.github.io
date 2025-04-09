@@ -761,6 +761,8 @@ https://visiblepolls.org/ug/2021-general-election/constituencies/busiro-east-154
                 <textarea placeholder="Write your message here..." id="contact-message" required></textarea>
             </div>
             <div class="form-button-container">
+              <div class="g-recaptcha" data-sitekey="6LdOtgsrAAAAAEjSrb_6e9Uoz3_LNargqPsxUQII" data-action="LOGIN"></div>
+              <br/>
                 <input type="button" value="Submit" class="form-button-submit" onclick="sendEmail()">
                 <span class="form-separator">or</span>
                 <input type="button" value="Send as SMS" class="form-button-sms" onclick="sendSMS()">
@@ -778,7 +780,10 @@ https://visiblepolls.org/ug/2021-general-election/constituencies/busiro-east-154
 
     </div>
 
- 
+    
+       
+         
+          
         <!-- footer 2 -->
 
 <footer>
@@ -932,5 +937,7 @@ whatsappIcon.style.display = 'none';
             window.open(`sms:0753484060?body=${smsBody}`);
         }
   </script>
+   <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+      
 </body>
 </html>
