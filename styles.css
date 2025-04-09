@@ -1,4 +1,57 @@
-           /*second layout view*/
+         /* ---------- CHAT POPUP STYLING ---------- */
+    .chat-button {
+      position: relative;
+      bottom: 20px;
+      right: 20px;
+      background-color: #fc16bf;
+      color: #0c0404;
+      font-size: 18px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 1001;
+    }
+    .chat-button:hover {
+      background-color: #81e440;
+    }
+    #chat-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      right: 40%;
+      width: 320px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 5px;
+      z-index: 1000;
+    }
+    #chat-popup h3 {  
+      margin-top: 0;
+      color: #af0a50;
+    }
+    #chat-popup .input-group {
+      margin-bottom: 10px;
+    }
+    #chat-popup .chat-options label {
+      margin-right: 10px;
+    }
+    /* For the belt purchase section inside chat */
+    #belt-section {
+      display: none;
+      margin-bottom: 10px;
+    }
+    #belt-section img {
+      width: 100%;
+      max-width: 150px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
+        /*second layout view*/
                    .container {
             max-width: 100%;
             
@@ -1495,7 +1548,7 @@ box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 .section {
-    padding: 2rem;
+    padding: 5px;
     background-color: rgba(255,255,255,.8);
     margin: 1rem;
     border-radius: 8px;

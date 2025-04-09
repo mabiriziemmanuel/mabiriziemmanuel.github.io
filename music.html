@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music & Piano Training Lessons Signup</title>
+  <!-- Google Material Icons and Font Awesome for icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ---------- GENERAL STYLING ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #54eedf, #f771bda5);
+      color: #333;
+      
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* ---------- DISCOUNT BANNER ---------- */
+    .discount-banner {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .discount-banner h1 {
+      font-size: 40px;
+      color: #af0a50;
+      text-shadow: 0 0 10px rgba(175,10,80,0.8), 0 0 20px rgba(255,255,255,0.8);
+      margin: 0;
+    }
+    .discount-banner .icon {
+      font-size: 50px;
+      color: #ff9a8b;
+      margin-bottom: 10px;
+    }
+    /* ---------- SIGNUP FORM ---------- */
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    .form-container h2 {
+      text-align: center;
+      color: #af0a50;
+      margin-bottom: 10px;
+    }
+    .form-container p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f8f8f8;
+      outline: none;
+    }
+    .input-group textarea {
+      resize: none;
+      height: 80px;
+    }
+    .submit-button {
+      background-color: #af0a50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .submit-button:hover {
+      background-color: #9c083e;
+    }
+    .price-info {
+      background-color: #e0e4e7;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+    /* Conditional Group for Children Info */
+    .conditional-group {
+      display: none;
+    }
+    /* ---------- CHAT POPUP STYLING ---------- */
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 18px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 1001;
+    }
+    .chat-button:hover {
+      background-color: #45a049;
+    }
+    #chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 320px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 20px;
+      z-index: 1000;
+    }
+    #chat-popup h3 {
+      margin-top: 0;
+      color: #af0a50;
+    }
+    #chat-popup .input-group {
+      margin-bottom: 10px;
+    }
+    #chat-popup .chat-options label {
+      margin-right: 10px;
+    }
+    /* For the belt purchase section inside chat */
+    #belt-section {
+      display: none;
+      margin-bottom: 10px;
+    }
+    #belt-section img {
+      width: 100%;
+      max-width: 150px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
+
+
+    /* ---------- BREADCRUMB STYLING ---------- */
+      header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 10px;
+        
+        }
+
+        .breadcrumb {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .breadcrumb li {
+            margin-right: 20px;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        .donate-form {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .donate-form h2 {
+            margin-top: 0;
+        }
+
+        .donate-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .donate-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .donate-form input:hover {
+            outline: 1px solid #c6efce;
+        }
+
+        .donate-form input[type="number"]:focus {
+            outline: 1px solid #c6e;
+        }
+
+        .donate-form select {
+            appearance: none;
+            background-image: linear-gradient(45deg, transparent 50%, white 50%), linear-gradient(135deg, lightblue 50%, transparent 50%);
+            background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+padding: 20px;
+        }
+
+        .donate-form select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .donate-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .donate-btn:hover {
+            background-color: #0069d9;
+        }
+
+        .impact {
+            background:
+      linear-gradient(to right,white, rgba(180,140,30,0.5));
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+ .titles{text-shadow: 5px 7px 5px rgba(0, 0, 0, 0.5);}
+        .impact h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+        p {color: grey;}
+         ul>li {color: grey;}
+         /*light Box */
+             .lightbox {
+      display: table; /* helps us center the lightbox-content */
+      opacity: 0; /* fully transparent (hidden) */
+      z-index: -1; /* put the lightbox layer below the body */
+      transition-duration: 1s; /* duration of the fade in effect */
+    
+      /* make the lightbox occupy the entire page */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.78); /* black with 0.6 opacity */
+    }
+    .lightbox:target {
+      opacity: 1; /* fully opaque (visible) */
+      z-index: 1; /* put the lightbox layer above the body */
+    }
+    .lightbox-content {
+      
+      font-weight:bold;
+      display: table-cell;
+      vertical-align: middle; /* vertically center */
+      text-align: center; /* horizontally center */
+      
+    
+    }
+    .close {
+      /* position the CLOSE button to the top-right corner */
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    
+      /* style the close button */
+      font-size: 18px;
+      font-weight: 400;
+      text-decoration: none;
+      color: red;
+    }
+    
+    /* make the image responsive */
+    img {
+      max-width: 60%;
+      height: 45%;
+    }
+    /*Tooltip*/
+        .tooltip {
+      position: relative; /* helps position the tooltip content */
+      border-bottom: 1px solid black;
+    }
+    .tooltip-content {
+      color: white;
+      background: black;
+      padding: 3px;
+      border-radius: 5px;
+      visibility: hidden; /* hides the tooltip content */
+    
+      /* positions the tooltip content */
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      width: 110px;
+      margin-left: -55px; /* (width / 2) x -1 */
+      left: 50%;
+      top: 150%; /* to the top */
+    }
+    .tooltip:hover > .tooltip-content {
+      visibility: visible; /* shows the tooltip content on mouse over */
+    }
+    .tooltip > .tooltip-content::after {
+      content: " ";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px solid transparent;
+      border-bottom-color: black;
+    }
+    
+        p>a:link{text-decoration: none;
+  color: grey;
+}
+    /* Marquee or ticker of Adverts  */
+    
+    .ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker span {
+  display: inline-block;
+  animation: ticker 80s  linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+    /* Marquee or ticker of Adverts  */
+    
+    .ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker span {
+  display: inline-block;
+  animation: ticker 70s  linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <header class="main">
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html#fundraising">Fundraising</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+              <span class="tooltip"> 
+              <span class="tooltip-content">  Welcome!
+               This is the  shopping form Page! </span>
+            
+          Donate Page</li></span>
+        </ol>
+        </nav>
+        </header>
+        
+           <!-- Marquee or ticker-->
+         <div class="ticker main">
+        <span> <a href ="designer.html" style= "text-decoration:none; font-family:droid sans; font-weight: bold; color:white;       background: linear-gradient(to top, red, indigo); padding:7px"> &nbsp;We Cheerfully recognise your genius by visiting this page!&nbsp;&nbsp;&nbsp;We also thank God for inspiring you give that amount.&nbsp;&nbsp;&nbsp;&nbsp;Please follow the prompts to cart and shop succesfully   &nbsp;&nbsp;&nbsp;&nbsp;Emmanuel is ever at your Service.&nbsp;&nbsp;&nbsp;&nbsp;May God&nbsp;&nbsp;&nbsp;Reward you abundantly!!!&nbsp;&nbsp; Order with Cash please!</a></span>
+        </div>
+  <div class="container">
+    <!-- Discount Banner -->
+    <div class="discount-banner">
+      
+      <h1>Discount Offer:</h1>
+    <h1> <i class="fas fa-tags icon" style="font-size:2.7rem"></i> 85% Off!</h1>
+    </div>
+    <!-- Signup Form -->
+    <div class="form-container">
+      <h2>Music & Piano Training Lessons</h2>
+      <p>Train your musical skills & learn piano for just <strong>UGX 100,000</strong> per month.</p>
+      <form id="signup-form">
+        <!-- Personal Details -->
+        <div class="input-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="input-group">
+          <label for="address">Home Address:</label>
+          <textarea id="address" name="address" placeholder="Enter your home address" required></textarea>
+        </div>
+        <!-- Registration Type -->
+        <div class="input-group">
+          <label for="registration-type">Register for:</label>
+          <select id="registration-type" name="registration-type" onchange="toggleChildrenInput()" required>
+            <option value="" disabled selected>Select option</option>
+            <option value="self">Self</option>
+            <option value="children">Children</option>
+          </select>
+        </div>
+        <div id="children-info" class="input-group conditional-group">
+          <label for="number-of-children">Number of Children:</label>
+          <input type="number" id="number-of-children" name="number-of-children" placeholder="Enter number of children">
+        </div>
+        <!-- Payment Details -->
+        <div class="input-group">
+          <label for="payment-method">Preferred Payment Method:</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="" disabled selected>Select payment method</option>
+            <option value="mobile-money">Mobile Money</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="cash">Cash</option>
+          </select>
+        </div>
+        <!-- Price Information -->
+        <div class="price-info">
+          <p><strong>Price per month:</strong> UGX 100,000</p>
+          <p><strong>Note:</strong> Payment must be completed before lessons start.</p>
+        </div>
+        <!-- Submit Button (will show payment instructions before emailing) -->
+        <button type="submit" class="submit-button" onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- Chat Popup for Shopping Cart Chat -->
+  <button class="chat-button" onclick="toggleChat()">Chat</button>
+  <div id="chat-popup">
+    <h3>Shopping Cart Chat</h3>
+    <!-- Query Options: Choose between booking or purchasing -->
+    <div class="input-group">
+      <label>What would you like to do?</label>
+      <div class="chat-options">
+        <label>
+          <input type="radio" name="chat-option" value="book-piano" onchange="toggleChatOption()" required>
+          Book Piano Lessons
+        </label>
+        <label>
+          <input type="radio" name="chat-option" value="purchase-belt" onchange="toggleChatOption()">
+          Purchase EcoHeal Wooden Belt
+        </label>
+      </div>
+    </div>
+    <!-- If Purchase EcoHeal Wooden Belt is selected, show belt section -->
+    <div id="belt-section">
+      <div class="input-group">
+        <img src="eco1.jpg" alt="EcoHeal Wooden Belt">
+      </div>
+      <div class="input-group">
+        <label for="belt-number">Number of Belts:</label>
+        <input type="number" id="belt-number" name="belt-number" placeholder="Enter number of belts">
+      </div>
+    </div>
+    <!-- Additional Details for Chat -->
+    <div class="input-group">
+      <label for="chat-details">Additional Details / Inquiries:</label>
+      <textarea id="chat-details" placeholder="Enter your inquiries or details here..." required></textarea>
+    </div>
+    <button type="submit" class="submit-button" onclick="submitChat()">Send</button>
+  </div>
+  <script>
+    // ---------- SIGNUP FORM - Toggle Children Info ---------- 
+    function toggleChildrenInput() {
+      const regType = document.getElementById("registration-type").value;
+      const childrenInfo = document.getElementById("children-info");
+      if (regType === "children") {
+        childrenInfo.style.display = "block";
+      } else {
+        childrenInfo.style.display = "none";
+      }
+    }
+    // ---------- SIGNUP FORM - Submission with Payment Reminder ----------
+    function submitForm() {
+      event.preventDefault();
+      const paymentMsg = "Please make payment to Mobile Money +256 758296217 and Centenary Bank A/C 3203875147 in the names of Mabirizi Emmanuel. Then, send a screenshot of your payment to shoppingcart@mabiriziemmanuel.com or WhatsApp +256 758296217. Click OK if you have completed the payment.";
+      if (confirm(paymentMsg)) {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const address = document.getElementById("address").value;
+        const registrationType = document.getElementById("registration-type").value;
+        const numberOfChildren = document.getElementById("number-of-children").value || "N/A";
+        const paymentMethod = document.getElementById("payment-method").value;
+        const subject = encodeURIComponent("Music & Piano Lessons Registration");
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nRegistration Type: ${registrationType}\nNumber of Children: ${numberOfChildren}\nPayment Method: ${paymentMethod}\nSubscription Fee: UGX 100,000/month`
+        );
+        window.open(`mailto:shoppingcart@mabiriziemmanuel.com?subject=${subject}&body=${body}`);
+      }
+    }
+    // ---------- CHAT POPUP Functions ----------
+    function toggleChat() {
+      const chatPopup = document.getElementById("chat-popup");
+      chatPopup.style.display = (chatPopup.style.display === "block") ? "none" : "block";
+    }
+    function toggleChatOption() {
+      const option = document.querySelector('input[name="chat-option"]:checked').value;
+      const beltSection = document.getElementById("belt-section");
+      beltSection.style.display = (option === "purchase-belt") ? "block" : "none";
+    }
+    function submitChat() {
+      event.preventDefault();
+      const chatOptionElem = document.querySelector('input[name="chat-option"]:checked');
+      if (!chatOptionElem) {
+        alert("Please select an option.");
+        return;
+      }
+      const option = chatOptionElem.value;
+      const chatDetails = document.getElementById("chat-details").value;
+      let subject = "";
+      let additionalInfo = "";
+      if (option === "book-piano") {
+        subject = "Booking Piano Lessons";
+      } else if (option === "purchase-belt") {
+        subject = "Purchase EcoHeal Wooden Belt";
+        const beltNumber = document.getElementById("belt-number").value || "Not specified";
+        additionalInfo = "\nNumber of Belts: " + beltNumber;
+      }
+      const finalSubject = encodeURIComponent("Shopping Cart Chat - " + subject);
+      const finalBody = encodeURIComponent("Details: " + chatDetails + additionalInfo);
+      window.open(`mailto:shoppingcart@mabiriziemmanuel.com?subject=${finalSubject}&body=${finalBody}`);
+    }
+  </script>
+</body>
+</html>

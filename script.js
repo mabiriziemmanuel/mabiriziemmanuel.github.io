@@ -1,6 +1,38 @@
    
 
 
+  // ---------- CHAT POPUP Functions ----------
+  function toggleChat() {
+    const chatPopup = document.getElementById("chat-popup");
+    chatPopup.style.display = (chatPopup.style.display === "block") ? "none" : "block";
+  }
+  function toggleChatOption() {
+    const option = document.querySelector('input[name="chat-option"]:checked').value;
+    const beltSection = document.getElementById("belt-section");
+    beltSection.style.display = (option === "purchase-belt") ? "block" : "none";
+  }
+  function submitChat() {
+    event.preventDefault();
+    const chatOptionElem = document.querySelector('input[name="chat-option"]:checked');
+    if (!chatOptionElem) {
+      alert("Please select an option.");
+      return;
+    }
+    const option = chatOptionElem.value;
+    const chatDetails = document.getElementById("chat-details").value;
+    let subject = "";
+    let additionalInfo = "";
+    if (option === "book-piano") {
+      subject = "Booking Piano Lessons";
+    } else if (option === "purchase-belt") {
+      subject = "Purchase EcoHeal Wooden Belt";
+      const beltNumber = document.getElementById("belt-number").value || "Not specified";
+      additionalInfo = "\nNumber of Belts: " + beltNumber;
+    }
+    const finalSubject = encodeURIComponent("Shopping Cart Chat - " + subject);
+    const finalBody = encodeURIComponent("Details: " + chatDetails + additionalInfo);
+    window.open(`mailto:shoppingcart@mabiriziemmanuel.com?subject=${finalSubject}&body=${finalBody}`);
+  }
 
 
    

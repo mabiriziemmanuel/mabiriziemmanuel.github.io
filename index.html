@@ -56,7 +56,43 @@
                     <ul class="dropdown-content">
                         <li><a href="#projects">Projects</a></li>
                 <li><a href="#gallery"><span style="color:red">√ Vote </span> Mabirizi Emmanuel for Mp Busiro East </a></li>
-                      
+                      <li>
+                         <!-- Chat Popup for Shopping Cart Chat -->
+  <button class="chat-button" style="display: inline-block;" onclick="toggleChat()"><i class="fas fa-shopping-cart"></i>Shopping </button>
+  <div id="chat-popup">
+    <h3>Shopping Cart Chat</h3>
+    <!-- Query Options: Choose between booking or purchasing -->
+    <div class="input-group">
+      <label>What would you like to do?</label>
+      <div class="chat-options">
+        <label>
+          <input type="radio" name="chat-option" value="book-piano" onchange="toggleChatOption()" required>
+          Book Piano Lessons
+        </label>
+        <label>
+          <input type="radio" name="chat-option" value="purchase-belt" onchange="toggleChatOption()">
+          Purchase EcoHeal Wooden Belt
+        </label>
+      </div>
+    </div>
+    <!-- If Purchase EcoHeal Wooden Belt is selected, show belt section -->
+    <div id="belt-section">
+      <div class="input-group">
+        <img src="eco1.jpg" alt="EcoHeal Wooden Belt">
+      </div>
+      <div class="input-group">
+        <label for="belt-number">Number of Belts:</label>
+        <input type="number" id="belt-number" name="belt-number" placeholder="Enter number of belts">
+      </div>
+    </div>
+    <!-- Additional Details for Chat -->
+    <div class="input-group">
+      <label for="chat-details">Additional Details / Inquiries:</label>
+      <textarea id="chat-details" placeholder="Enter your inquiries or details here..." required></textarea>
+    </div>
+    <button type="submit" class="submit-button" onclick="submitChat()">Send</button>
+  </div>
+                      </li>
                         <li><a href="#contact">For Inquiries Chat 
                         
                       <button class="messages-btn">
@@ -175,19 +211,14 @@
         </a>
       </li>
       <li>
-        <a href="#" onclick="openPDF('manifesto.pdf')">
+      <!--  <a href="#" onclick="openPDF('manifesto.pdf')">
           <i class="fas fa-file-pdf"></i>
           Manifesto (View PDF)
         </a>
-      </li>
-
-    </ul>
-  </div>
-
-
-
-
-
+      </li>  -->
+ <!-- Chat Popup for Shopping Cart Chat -->
+ <button class="chat-button" style="display: inline;padding: 8px;" onclick="window.open('music.html')"><i class="fas fa-shopping-cart"></i>Shopping </button>
+ 
 
   </section>
 
@@ -279,6 +310,76 @@
         <p class="animate-from-left">Support Mabirizi Emmanuel's campaign by donating today.</p>
        <a href="donations.html"> <button class="donateBtn2 ">          <i class="fas fa-hand-holding-heart"></i>Donate Now</button></a>
     </div>
+
+  <div class="section" style="
+    background: linear-gradient(135deg, #94daf4, #2980b9);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  ">
+    <h1 style="font-size: 48px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">
+      Promotion! Promotion!
+    </h1>
+    <div>
+      <!-- Big, dramatic icons for music and piano -->
+      <i class="fas fa-music" style="font-size: 80px; color: #3b7cff; margin: 0 20px;"></i>
+      
+    </div>
+    <p style="font-size: 24px; margin: 20px 0;">
+      Enjoy Music & Piano Lessons at only <strong>UGX 100,000</strong> per month
+    </p>
+  
+    <i class="fas fa-briefcase" style="font-size: 80px; color:#3b7cff; margin: 0 20px;"></i>
+    <p style="font-size: 20px;">
+      Book your lessons now and get started on your musical journey!</p>
+    <p style="font-size: 20px;">
+      Pay cash and practicle lessons shall start after payment – both young and old are welcome!
+    </p>
+    <img src="piano1.jpg" alt="Piano Lessons" style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 20px;">
+ <h1>Booking Now</h1>
+  <!-- Chat Popup for Shopping Cart Chat -->
+  <button class="chat-button" onclick="window.open('music.html')"><i class="fas fa-shopping-cart"></i>Booking </button>
+ 
+or
+ <!-- Chat Popup for Shopping Cart Chat -->
+ <button class="chat-button" onclick="toggleChat()"><i class="fas fa-shopping-cart"></i>Order form </button>
+ <div id="chat-popup">
+   <h3>Shopping Cart Chat</h3>
+   <!-- Query Options: Choose between booking or purchasing -->
+   <div class="input-group">
+     <label>What would you like to do?</label>
+     <div class="chat-options">
+       <label>
+         <input type="radio" name="chat-option" value="book-piano" onchange="toggleChatOption()" required>
+         Book Piano Lessons
+       </label>
+       <label>
+         <input type="radio" name="chat-option" value="purchase-belt" onchange="toggleChatOption()">
+         Purchase EcoHeal Wooden Belt
+       </label>
+     </div>
+   </div>
+   <!-- If Purchase EcoHeal Wooden Belt is selected, show belt section -->
+   <div id="belt-section">
+     <div class="input-group">
+       <img src="eco1.jpg" alt="EcoHeal Wooden Belt">
+     </div>
+     <div class="input-group">
+       <label for="belt-number">Number of Belts:</label>
+       <input type="number" id="belt-number" name="belt-number" placeholder="Enter number of belts">
+     </div>
+   </div>
+   <!-- Additional Details for Chat -->
+   <div class="input-group">
+     <label for="chat-details">Additional Details / Inquiries:</label>
+     <textarea id="chat-details" placeholder="Enter your inquiries or details here..." required></textarea>
+   </div>
+   <button type="submit" class="submit-button" onclick="submitChat()">Send</button>
+ </div>
+
 
     <div class="section black" style="background-color: #34495e;width:100%;padding:20px;margin-left:0px;border-radius:5px ">
             <p style="text-align:center">
@@ -383,6 +484,41 @@
 </p>
 
 </div>
+  <!-- Chat Popup for Shopping Cart Chat -->
+  <button class="chat-button" onclick="toggleChat()"><i class="fas fa-shopping-cart"></i>Shopping </button>
+  <div id="chat-popup">
+    <h3>Shopping Cart Chat</h3>
+    <!-- Query Options: Choose between booking or purchasing -->
+    <div class="input-group">
+      <label>What would you like to do?</label>
+      <div class="chat-options">
+        <label>
+          <input type="radio" name="chat-option" value="book-piano" onchange="toggleChatOption()" required>
+          Book Piano Lessons
+        </label>
+        <label>
+          <input type="radio" name="chat-option" value="purchase-belt" onchange="toggleChatOption()">
+          Purchase EcoHeal Wooden Belt
+        </label>
+      </div>
+    </div>
+    <!-- If Purchase EcoHeal Wooden Belt is selected, show belt section -->
+    <div id="belt-section">
+      <div class="input-group">
+        <img src="eco1.jpg" alt="EcoHeal Wooden Belt">
+      </div>
+      <div class="input-group">
+        <label for="belt-number">Number of Belts:</label>
+        <input type="number" id="belt-number" name="belt-number" placeholder="Enter number of belts">
+      </div>
+    </div>
+    <!-- Additional Details for Chat -->
+    <div class="input-group">
+      <label for="chat-details">Additional Details / Inquiries:</label>
+      <textarea id="chat-details" placeholder="Enter your inquiries or details here..." required></textarea>
+    </div>
+    <button type="submit" class="submit-button" onclick="submitChat()">Send</button>
+  </div>
 <!-- Carousel goes here -->
 <div class="carousel-container">
 <div class="carousel">
@@ -594,7 +730,12 @@ https://visiblepolls.org/ug/2021-general-election/constituencies/busiro-east-154
   <p>Or</p>
   <p>Email:</p>
       <p style="color:blue"> <i class="material-icons"></i> <a href="mailto:info@mabiriziemmanuel.com?subject=Contacting The Mp&body=Hi, my name is " target="_blank">info@mabiriziemmanuel.com</a></p>
-        <p>Or</p>
+       <p>For inquiries</p>
+       <p style="color:blue"> <i class="material-icons"></i> <a href="mailto:inquiries@mabiriziemmanuel.com?subject=Contacting The Mp&body=Hi, my name is " target="_blank">info@mabiriziemmanuel.com</a></p>
+      <p> Make Your Shopping  and Donation queries</p> 
+      <p style="color:blue"> <i class="material-icons"></i> <a href="mailto:shoppingcart@mabiriziemmanuel.com?subject=Contacting The Mp&body=Hi, my name is " target="_blank">info@mabiriziemmanuel.com</a></p>
+      
+      <p>Or</p>
      <div class="social-media-links">
       <a href="https://www.facebook.com/profile.php?id=100063638752938" target="_blank"><i class="fab fa-facebook social-media-icon"></i></a>
       <a href="https://wa.me/256758296217?text=*Hi*%20!%20Iam%20interested%20in%20seeing%20you%20win%20the%20forthcoming%20elections%20dear%20Emmanuel,%20I %20really%20like %20your%20commitment%20towards%20the%20Church%20and%20Busiro%20East%20at%20large!%20*I also%20heard%20your%20need%20for%20Donations,%20your%20Projects%20%20and%20many%20more!*%20%0AHere%20I%20am,%20Let%20us%20talk%20about%20" target="_blank"><i class="fab fa-whatsapp social-media-icon"></i></a>
