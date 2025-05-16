@@ -1,405 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Gallery </title>
-           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Righteous&amp;display=swap'>
-  <link rel="stylesheet" href="./style.css">
-
-   
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
-
-        header {
-            background-color: #34495e;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .breadcrumb {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .breadcrumb li {
-            margin-right: 20px;
-        }
-
-        .breadcrumb a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-            /*Tooltip*/
-        .tooltip {
-      position: relative; /* helps position the tooltip content */
-      border-bottom: 1px solid black;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Gallery Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
     }
-    .tooltip-content {
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #34495e;
       color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .breadcrumb {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .breadcrumb li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    .breadcrumb a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip-content {
+      visibility: hidden;
       background: black;
-      padding: 3px;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
       border-radius: 5px;
-      visibility: hidden; /* hides the tooltip content */
-    
-      /* positions the tooltip content */
       position: absolute;
       z-index: 1;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .tooltip:hover .tooltip-content {
+      visibility: visible;
+    }
+
+    .ticker {
+      overflow: hidden;
+      white-space: nowrap;
+      background: indigo;
+      color: white;
+      font-weight: bold;
+    }
+
+    .ticker span {
+      display: inline-block;
+      padding: 10px;
+      animation: ticker 40s linear infinite;
+    }
+
+    @keyframes ticker {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    h5 {
       text-align: center;
-      width: 110px;
-      margin-left: -55px; /* (width / 2) x -1 */
-      left: 50%;
-      top: 150%; /* to the top */
+      color: silver;
+      margin-top: 30px;
     }
-    .tooltip:hover > .tooltip-content {
-      visibility: visible; /* shows the tooltip content on mouse over */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
     }
-    .tooltip > .tooltip-content::after {
-      content: " ";
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border: 5px solid transparent;
-      border-bottom-color: black;
+
+    .gallery-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
-        p>a:link{text-decoration: none;
-  color: grey;
-}
-    /* Marquee or ticker of Adverts  */
-    
-    .ticker {
-  overflow: hidden;
-  white-space: nowrap;
-}
 
-.ticker span {
-  display: inline-block;
-  animation: ticker 80s  linear infinite;
-}
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
 
-@keyframes ticker {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-    /* Marquee or ticker of Adverts  */
-    
-    .ticker {
-  overflow: hidden;
-  white-space: nowrap;
-}
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      display: block;
+    }
 
-.ticker span {
-  display: inline-block;
-  animation: ticker 70s  linear infinite;
-}
+    dialog {
+      width: 90%;
+      max-width: 600px;
+      border: none;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
 
-@keyframes ticker {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+    .buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
 
+    .blinking {
+      animation: blink 1s step-start infinite;
+    }
 
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
 
-</style>
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .profile-btn {
+      background-color: cyan;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-img {
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <header>
-<nav aria-label="breadcrumb" id="top">
-<ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="designer3.html">Home</a></li>
-<li class="breadcrumb-item"><a href="index.html#fundraising">Fundraising</a></li>
-<li class="breadcrumb-item"><a href="donations.html">
-      <span class="tooltip"> 
-      <span class="tooltip-content">  Please Make Donations Here! </span>
-    
-  Donate Page</a></li></span>
-</ol>
-</nav>
+  <nav aria-label="breadcrumb" id="top">
+    <ol class="breadcrumb">
+      <li><a href="designer3.html">Home</a></li>
+      <li><a href="index.html#fundraising">Fundraising</a></li>
+      <li class="tooltip">
+        <a href="donations.html">Donate Page</a>
+        <span class="tooltip-content">Please Make Donations Here!</span>
+      </li>
+    </ol>
+  </nav>
 </header>
-<section style="background-color:indigo">
-   <!-- Marquee or ticker-->
- <div class="ticker">
-<span> <a href ="designer2.html" style= "text-decoration:none; font-family:droid sans; font-weight: bold; color:white;       background: linear-gradient(to top, red, indigo); padding:7px"> &nbsp;We Cheerfully recognise your genius by visiting this page!&nbsp;&nbsp;&nbsp;We also thank God for inspiring you to support Emmanuel in all his endeavours.&nbsp;&nbsp;&nbsp;&nbsp;Please consider donating any amount as your heart directs you to.   &nbsp;&nbsp;&nbsp;&nbsp;Emmanuel is ever at your Service and Busiro East at large.&nbsp;&nbsp;&nbsp;&nbsp;May God&nbsp;&nbsp;&nbsp;Reward you abundantly!!!&nbsp;&nbsp; Tap to See more!</a></span>
-</div>  
-<iframe loading="lazy"  width="100%" height="400" src="https://www.youtube.com/embed/kzWC-UeGZmk?si=zunQQxFu9fyCml3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-  	            <img src="social2.jpg" alt="masterguide Emma">
-  	           
-    <h1 style="text-align: center; color:gold"> Mp Emmanuel Master guide</h1>
-  	            <img src="mg1.jpg" alt="masterguide Emma">
-  	            </section>
-  	            <br>
-  
-  <section style="background-color:silver">
-<!-- gallery -->
-<div id="all">
-  <div id="allcontent">
-      <div id="maincontent">
-	        <div class="portfolio">
-	            <img src="masterguide2.jpg" alt="Master Guide Emmanuel"><br>
-	            <span class="txt">Determined to Serve</span>
-	            <div class="ombra"></div>
-	        </div>
-	        <div class="portfolio">
-	            <img src="masterguide1.jpg" alt="Master Guide Emmanuel"><br>
-	            <span class="txt">Not your ordinary leader, He is a Leader.</span>
-	            <div class="ombra"></div>
-	        </div>
-	        <div class="portfolio">
-	            <img src="masterguide6.jpg" alt="Master Guide Emmanuel"><br>
-	            <span class="txt"> <a href="masterguide2.jpg" target="_blank" title="see more"></a>God First</span>
-	            <div class="ombra"></div>
-	        </div>
-	        <div class="portfolio">
-	            <img src="masterguide1.jpg" alt="Master Guide Emmanuel"><br>
-	            <span class="txt"><a href="designer2.html" target="_blank" title="Alfa Romeo"></a> <a href="designer2.html" target="_blank" title="WEDOO"></a>A Resiliant Adventist</span>
-	            <div class="ombra"></div>
-	        </div>
-	        <div class="portfolio">
-	            <img src="masterguide3.jpg" alt="Master Guide Emmanuel"><br>
-	            <span class="txt">God With Us</span>
-	            <div class="ombra"></div>
-	        </div>
-	    </div>
-	    <div id="navi"></div>
-	   
-	</div>
-</div>
+<section class="ticker">
+  <span><a href="designer2.html" style="color:white;">We Cheerfully recognise your genius... Tap to See more!</a></span>
 </section>
 
+<section>
+  <iframe src="https://www.youtube.com/embed/kzWC-UeGZmk" title="YouTube Video"></iframe>
+  <div class="gallery-grid">
+    <img src="social2.jpg" alt="Master Guide Emma" class="gallery-img">
+    <img src="mg1.jpg" alt="Master Guide Emma" class="gallery-img">
+  </div>
+</section>
+
+<section class="gallery-grid">
+  <img src="masterguide2.jpg" alt="Master Guide Emmanuel" class="gallery-img">
+  <img src="masterguide1.jpg" alt="Master Guide Emmanuel" class="gallery-img">
+  <img src="masterguide6.jpg" alt="Master Guide Emmanuel" class="gallery-img">
+  <img src="masterguide3.jpg" alt="Master Guide Emmanuel" class="gallery-img">
+</section>
 
 <main>
-<h5 style="color:silver">Enjoy some Happy Moments and tours</h5>
-
-    <lightbox-image dialog-id="lightbox">
-    <img src='profile-pic.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='yes2.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='social2.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='londa.jpg' alt=''>
-  </lightbox-image>
-  <lightbox-image dialog-id="lightbox">
-    <img src='mgCertificate.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='music1.jpg' alt=''>
-  </lightbox-image>
-  <lightbox-image dialog-id="lightbox">
-    <img src='music2.jpg' alt=''>
-  </lightbox-image>
-  <lightbox-image dialog-id="lightbox">
-    <img src='music3.jpg' alt=''>
-  </lightbox-image>
-    <lightbox-image dialog-id="lightbox">
-    <img src='music4.jpg' alt=''>
-  </lightbox-image>
-  
-  
-  
-  
-  <lightbox-image dialog-id="lightbox">
-    <img src='social.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='politicalwarfare2.jpg' alt=''>
-  </lightbox-image>
-
-
-<dialog id="lightbox">
-  <form method="dialog">
-    <button>Close </button>
-  </form>
-</dialog>
-</main>
-<!-- partial -->
-
-    <div class="image-container" id="container2">
-      <a href="#image7"><img src="profile-pic.jpg" /></a>
-      <p class="image-description"> Vote Mabirizi Emmanuel for Mp Busiro East </p>
-    </div>
-  
-    <div class="image-container" id="container3">
-      <a href="#image3"><img src="tour (4).jpg" /></a>
-      
-    </div>
-  
-    <div class="image-container" id="container4">
-      <a href="#image4"><img src="NUP1.jpg" /></a>
-      
-    </div>
-      <div class="image-container" id="container4">
-      <a href="#image5"><img src="tour (2).jpg" /></a>
-    
-    </div>
+  <h5>Enjoy some Happy Moments and tours</h5>
+  <div class="gallery-grid">
+    <img src="profile-pic.jpg" class="gallery-img">
+    <img src="yes2.jpg" class="gallery-img">
+    <img src="social2.jpg" class="gallery-img">
+    <img src="londa.jpg" class="gallery-img">
+    <img src="mgCertificate.jpg" class="gallery-img">
+    <img src="music1.jpg" class="gallery-img">
+    <img src="music2.jpg" class="gallery-img">
+    <img src="music3.jpg" class="gallery-img">
+    <img src="music4.jpg" class="gallery-img">
   </div>
-  
-  
-  <div class="lightbox" id="image1">
-    <a href="#" class="close">CLOSE</a>
-    <div class="lightbox-content">
-      <img src="tour (3).jpg" />
-    </div>
+
+  <h5>Eco Heal Wooden Belts Project</h5>
+  <div class="gallery-grid">
+    <img src="eco1.jpg" class="gallery-img">
+    <img src="eco2.jpg" class="gallery-img">
+    <img src="eco3.jpg" class="gallery-img">
+    <img src="eco4.jpg" class="gallery-img">
+    <img src="eco5.jpg" class="gallery-img">
+    <img src="eco6.jpg" class="gallery-img">
+    <img src="eco7.jpg" class="gallery-img">
+    <img src="eco8.jpg" class="gallery-img">
+    <img src="eco9.jpg" class="gallery-img">
+    <img src="eco10.jpg" class="gallery-img">
+    <img src="ecoEma.jpg" class="gallery-img">
   </div>
-  
-  <div class="lightbox" id="image2">
-    <a href="#" class="close">CLOSE</a>
-    <div class="lightbox-content">
-      <img src="tour (6).jpg" />
-    </div>
-  </div>
-    <div class="lightbox" id="image7">
-    <a href="#" class="close">CLOSE</a>
-    <div class="lightbox-content">
-      <img src="yes1.jpg" />
-    </div>
-  </div>
-  
-  <div class="lightbox" id="image3">
-    <a href="#container3" class="close">CLOSE</a>
-    <div class="lightbox-content">
-      <img src="tour (6).jpg" />
-    </div>
-  </div>
-  
-  <div class="lightbox" id="image4">
-    <a href="#container4" class="close">CLOSE</a>
-    <div class="lightbox-content">
-      <img src="tour (6).jpg" />
-    </div>
-  </div>
-  
-  <main>
-<h5 style="color:silver">Eco Heal Wooden Belts Project</h5>
 
-    <lightbox-image dialog-id="lightbox" id="ecoheal">
-    <img src='eco1.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='eco2.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='eco3.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='eco4.jpg' alt=''>
-  </lightbox-image>
-  <lightbox-image dialog-id="lightbox">
-    <img src='eco5.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='eco6.jpg' alt=''>
-  </lightbox-image>
-
-  <lightbox-image dialog-id="lightbox">
-    <img src='eco7.jpg' alt=''>
-  </lightbox-image>
- 
-  <lightbox-image dialog-id="lightbox">
-    <img src='eco8.jpg' alt=''>
-  </lightbox-image>
-    <lightbox-image dialog-id="lightbox">
-    <img src='eco9.jpg' alt=''>
-  </lightbox-image>
-    <lightbox-image dialog-id="lightbox">
-    <img src='eco10.jpg' alt=''>
-  </lightbox-image>
-    <lightbox-image dialog-id="lightbox">
-    <img src='ecoEma.jpg' alt=''>
-  </lightbox-image>
-
-
-<dialog id="lightbox">
-  <form method="dialog">
-    <button>Close </button>
-  </form>
-</dialog>
-
+  <dialog id="lightbox">
+    <img id="lightbox-img" src="" alt="" style="width: 100%; border-radius: 10px;">
+    <form method="dialog">
+      <button>Close</button>
+    </form>
+  </dialog>
 </main>
 
-
-
-            <div class="buttons">
- 
-             <p>  <a href="https://whatsapp.com/channel/0029VaDRGN9EwEjsF5Xpke0L" class="whatsapp blinking"id="contacts">
-                    <i class="fab fa-whatsapp"></i>  Follow Eco Heal on WhatsApp
-                </a>
-                </p>
+<div class="buttons">
+  <p><a href="https://whatsapp.com/channel/0029VaDRGN9EwEjsF5Xpke0L" class="whatsapp blinking"><i class="fab fa-whatsapp"></i> Follow Eco Heal on WhatsApp</a></p>
+  <p><a href="https://x.com/wooden_belt" target="_blank" style="color:white"><i class="fab fa-x"></i> Join my X channel</a></p>
 </div>
-            <p> <a href="https://x.com/wooden_belt?t=JybEBtSL2XhdiQO35fmx_w&s=09" target="_blank" class="x-button" style="color:white">
-  <i class="fa-brands fa-x"></i>
-  Join my X channel
-</a>
-          </p>  
-          
-                  <!-- footer 2 -->
 
 <footer>
-    <div class="footer-body">
-      <div class="blinking"> <a href="designer2.html" style="text-decoration:none; color: cyan">
-      <button class="profile-btn ">
-
-      </button> Yo websites Master🇺🇬  </a></div>
-      <div>
-<p >This websiteswas designer and created by Yo WebMaster company</p>
-      <p>  <ul>
-
-          <li><a href='#top'> Go back to Top</a></li>
-</p>
-      </div>
+  <div class="footer-body">
+    <div class="blinking">
+      <a href="designer2.html" style="text-decoration:none; color: cyan">
+        <button class="profile-btn">Yo websites Master🇺🇬</button>
+      </a>
     </div>
-    <div class="footer-copyright">
-      © 2025 MP Busiro East to be  Mabirizi Emmanuel.
+    <p>This website was designed and created by Yo WebMaster company</p>
+    <ul><li><a href="#top">Go back to Top</a></li></ul>
+  </div>
+  <div>
+    &copy; 2025 MP Busiro East to be Mabirizi Emmanuel. <span>All rights reserved.</span>
+  </div>
+</footer>
 
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
 
-    <span class="black">All rights reserved.</span>
-    </div>
-  </footer>
-<!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./scripts.js"></script>
-
+  document.querySelectorAll(".gallery-img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.showModal();
+    });
+  });
+</script>
 </body>
 </html>
