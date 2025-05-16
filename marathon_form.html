@@ -287,11 +287,6 @@
         // Form submission feedback
         document.getElementById('marathonForm').addEventListener('submit', function(e) {
             
-            const kitQty = parseInt(document.querySelector(`input[name="${selectedKit.name.replace('Type', 'Qty')}"]`).value);
-            if (kitQty < 1) {
-                alert('Please select at least one kit');
-                e.preventDefault();
-                return;
             }
             
             alert('Thank you for your order! We will send confirmation details to your email shortly.');
