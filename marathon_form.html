@@ -286,13 +286,6 @@
 
         // Form submission feedback
         document.getElementById('marathonForm').addEventListener('submit', function(e) {
-            // Validate at least one kit is selected with quantity > 0
-            const selectedKit = document.querySelector('input[name="kitType"]:checked');
-            if (!selectedKit) {
-                alert('Please select a kit type');
-                e.preventDefault();
-                return;
-            }
             
             const kitQty = parseInt(document.querySelector(`input[name="${selectedKit.name.replace('Type', 'Qty')}"]`).value);
             if (kitQty < 1) {
