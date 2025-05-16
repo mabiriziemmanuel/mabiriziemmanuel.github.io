@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Kit Purchase Form</title>
+    <style>
+        /* Modern styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #e63946;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .form-intro {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        /* Form styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2b2d42;
+        }
+        
+        .required:after {
+            content: " *";
+            color: #e63946;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #e63946;
+            outline: none;
+            box-shadow: 0 0 5px rgba(230, 57, 70, 0.2);
+        }
+        
+        /* Kit selection */
+        .kit-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .kit-option {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 6px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .kit-option:hover {
+            border-color: #e63946;
+        }
+        
+        .kit-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .quantity-selector button {
+            background: #f1f1f1;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .quantity-selector input {
+            width: 50px;
+            text-align: center;
+            margin: 0 10px;
+        }
+        
+        /* Submit button */
+        .submit-btn {
+            background: linear-gradient(135deg, #e63946, #d90429);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #d90429, #e63946);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .kit-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Marathon Kit Purchase</h1>
+        <p class="form-intro">Fill out this form to order your official marathon kit. Delivery details will be sent to your email.</p>
+        
+        <form id="marathonForm" action="mailto:info@mabiriziemmanel.com" method="POST" enctype="text/plain">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="fullName" class="required">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone" class="required">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <!-- Shipping Information -->
+            <div class="form-group">
+                <label for="sub-county" class="required">Sub-county</label>
+                <input type="text" id="sub-county" name="sub-county" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="village" class="required">Village</label>
+                <input type="text" id="village" name="village" required>
+            </div>
+            
+            <!-- Kit Selection -->
+            <div class="form-group">
+                <label class="required">Number of Kits
+                    <div class="quantity-selector">
+                        <button type="button" class="decrement">-</button>
+                        <input type="number" name="standardKitQty" value="1" min="1" class="qty-input">
+                        <button type="button" class="increment">+</button>
+                    </div>
+                </label>
+                </div>
+                <!-- Size Selection -->
+            <div class="form-group">
+                <label for="shirtSize" class="required">T-Shirt Size</label>
+                <select id="shirtSize" name="shirtSize" required>
+                    <option value="">Select size</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            
+            <!-- Additional Options -->
+            <div class="form-group">
+                <label>Additional Items</label>
+                <div class="kit-options">
+                    <label class="kit-option">
+                        <input type="checkbox" name="runningCap" value="Running Cap"> 
+                        Running Cap
+                        <div class="quantity-selector">
+                            <button type="button" class="decrement">-</button>
+                            <input type="number" name="runningCapQty" value="0" min="0" class="qty-input">
+                            <button type="button" class="increment">+</button>
+                        </div>
+                    </label>
+                    
+                    <label class="kit-option">
+                        <input type="checkbox" name="personalizedBib" value="Personalized Bib"> 
+                        Personalized Bib
+                        <div class="quantity-selector">
+                            <button type="button" class="decrement">-</button>
+                            <input type="number" name="personalizedBibQty" value="0" min="0" class="qty-input">
+                            <button type="button" class="increment">+</button>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Special Instructions -->
+            <div class="form-group">
+                <label for="instructions">Special Instructions</label>
+                <textarea id="instructions" name="instructions" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Complete Purchase</button>
+        </form>
+            </div>
+    </div>
+
+    <script>
+        // Quantity selector functionality
+        document.querySelectorAll('.increment').forEach(button => {
+            button.addEventListener('click', () => {
+                const input = button.parentElement.querySelector('.qty-input');
+                input.value = parseInt(input.value) + 1;
+            });
+        });
+
+        document.querySelectorAll('.decrement').forEach(button => {
+            button.addEventListener('click', () => {
+                const input = button.parentElement.querySelector('.qty-input');
+                if (parseInt(input.value) > (input.min || 0)) {
+                    input.value = parseInt(input.value) - 1;
+                }
+            });
+        });
+
+        // Link checkboxes to quantity inputs
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            const qtyInput = checkbox.closest('.kit-option').querySelector('.qty-input');
+            
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    qtyInput.value = 1;
+                } else {
+                    qtyInput.value = 0;
+                }
+            });
+            
+            qtyInput.addEventListener('change', () => {
+                checkbox.checked = parseInt(qtyInput.value) > 0;
+            });
+        });
+
+        // Form submission feedback
+        document.getElementById('marathonForm').addEventListener('submit', function(e) {
+            // Validate at least one kit is selected with quantity > 0
+            const selectedKit = document.querySelector('input[name="kitType"]:checked');
+            if (!selectedKit) {
+                alert('Please select a kit type');
+                e.preventDefault();
+                return;
+            }
+            
+            const kitQty = parseInt(document.querySelector(`input[name="${selectedKit.name.replace('Type', 'Qty')}"]`).value);
+            if (kitQty < 1) {
+                alert('Please select at least one kit');
+                e.preventDefault();
+                return;
+            }
+            
+            alert('Thank you for your order! We will send confirmation details to your email shortly.');
+        });
+    </script>
+</body>
+</html>
